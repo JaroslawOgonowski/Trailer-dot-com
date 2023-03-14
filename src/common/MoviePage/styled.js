@@ -4,6 +4,12 @@ export const StyledPage = styled.div`
 margin: 146px 33% 0 100px
 `;
 
+export const MovieBox = styled.div`
+display: flex;
+align-items: center;
+justify-content: space-between;
+`;
+
 export const Title = styled.h1`
 color: #FFFFFF;
 font-family: 'Stranger back in the Night', sans-serif;                                                
@@ -12,6 +18,12 @@ font-weight: 400;
 font-size: 330px;
 margin: 0;
 `;
+
+export const Trailer = styled.div`
+max-width: 200px;
+`;
+
+
 export const MovieInformation = styled.div`
 font-family: 'Segoe UI';
 font-style: normal;

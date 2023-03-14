@@ -1,10 +1,10 @@
 import MovieButtons from "./MovieButtons";
 import { ReactComponent as Top10 } from "./images/Top10.svg";
 import {
-  Cast,
   Content,
   Description,
   Label,
+  MovieBox,
   MovieData,
   MovieInformation,
   OtherInfo,
@@ -13,13 +13,30 @@ import {
   Subtitle,
   Title,
   Top,
+  Trailer,
 } from "./styled";
 import { Tags } from "./Tags";
 
 export const MoviePage = () => {
   return (
     <StyledPage>
-      <Title>Wednesday</Title>
+      <MovieBox>
+        <Title>Wednesday</Title>
+        <Trailer>
+          <iframe width="450" height="260"
+            src="https://www.youtube.com/embed/Di310WS8zLk?controls=0"
+            title="YouTube video player"
+            allow="accelerometer; 
+            autoplay; 
+            clipboard-write; 
+            encrypted-media; 
+            gyroscope; 
+            picture-in-picture; 
+            web-share"
+            >
+          </iframe>
+        </Trailer>
+      </MovieBox>
       <MovieButtons />
       <MovieInformation>
         <Specification>

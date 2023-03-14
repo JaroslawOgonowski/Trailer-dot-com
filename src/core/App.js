@@ -1,7 +1,7 @@
 import { ThemeProvider } from "styled-components";
-import { Footer } from "../Footer";
-import { Header } from "../Header";
-import { MoviePage } from "../MoviePage";
+import { Footer } from "../common/Footer";
+import { Header } from "../common/Header";
+import { MoviePage } from "../common/MoviePage";
 import { GlobalStyle } from "./GlobalStyle";
 import { PageContainer } from "./styled";
 import { theme } from "./theme";
