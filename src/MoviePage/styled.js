@@ -13,28 +13,65 @@ font-size: 330px;
 margin: 0;
 `;
 export const MovieInformation = styled.div`
-
+font-family: 'Segoe UI';
+font-style: normal;
+color: #FFFFFF;
+display: flex;
+gap: 45px;
 `;
+
+export const Specification = styled.div`
+display: flex;
+flex-direction: column;
+`;
+
 export const Tags = styled.div`
 display: flex;
 align-items: center;
 `;
+
 export const Top = styled.div`
-
+margin-top: 16px;
+font-weight: 600;
+font-size: 20px;
+display: flex;
+align-items: center;
+color: white;
 `;
-export const Subtitle = styled.div`
 
+export const Content = styled.div`
+margin-left: 11px;
+`;
+
+export const Subtitle = styled.div`
+font-size: 20px;
+margin-top: 20px;
 `;
 export const Description = styled.div`
-
+margin-top: 16px;
+font-size: 16px;
+max-width: 470px;
 `;
-export const Cast = styled.div`
 
+export const MovieData = styled.div`
+display: flex;
+flex-direction: column;
+margin-right: 0;
+font-size: 14px;
 `;
-export const Genres = styled.div`
 
+export const Label = styled.div`
+color:rgba(153, 153, 153, 1);
+max-width: 240px;
+max-height: 40px;
+margin-bottom: 14px;
 `;
-export const Species = styled.div`
 
+export const OtherInfo = styled.span`
+line-height: 20px;
+color: white;
+margin-bottom: 14px;
 `;
+
+
 
