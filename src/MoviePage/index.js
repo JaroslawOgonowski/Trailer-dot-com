@@ -1,31 +1,24 @@
+import MovieButtons from "./MovieButtons";
 import {
-  Add,
   Cast,
   Description,
   Genres,
-  Like,
-  MovieButtons,
   MovieInformation,
   Species,
   StyledPage,
   Subtitle,
-  Tags,
   Title,
   Top,
-  Watch
 } from "./styled";
+import { Tags } from "./Tags";
 
 export const MoviePage = () => {
   return (
     <StyledPage>
       <Title>Wednesday</Title>
-      <MovieButtons>
-        <Watch></Watch>
-        <Add></Add>
-        <Like></Like>
-      </MovieButtons>
+      <MovieButtons />
       <MovieInformation>
-        <Tags></Tags>
+        <Tags />
         <Top></Top>
         <Subtitle></Subtitle>
         <Description></Description>
