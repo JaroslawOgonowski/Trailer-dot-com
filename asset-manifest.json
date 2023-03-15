@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.js": "/Netflix-style-movie-page-on-react/static/js/main.20bd0f24.js",
+    "main.js": "/Netflix-style-movie-page-on-react/static/js/main.d203bde9.js",
     "static/js/787.3bb37498.chunk.js": "/Netflix-style-movie-page-on-react/static/js/787.3bb37498.chunk.js",
     "static/media/thirdImage.png": "/Netflix-style-movie-page-on-react/static/media/thirdImage.ac8f359ed4d85960544d.png",
     "static/media/secondImage.png": "/Netflix-style-movie-page-on-react/static/media/secondImage.66e736bdd925aa090485.png",
@@ -12,10 +12,10 @@
     "static/media/SubtitlesIcon.svg": "/Netflix-style-movie-page-on-react/static/media/SubtitlesIcon.7ca023ef2f558604c328fc54e32a2caa.svg",
     "static/media/Like.svg": "/Netflix-style-movie-page-on-react/static/media/Like.48a71ad1fd2be2f7f5e78ed7a81c1147.svg",
     "static/media/Add.svg": "/Netflix-style-movie-page-on-react/static/media/Add.de904cd6b324cd137e2528d219257f17.svg",
-    "main.20bd0f24.js.map": "/Netflix-style-movie-page-on-react/static/js/main.20bd0f24.js.map",
+    "main.d203bde9.js.map": "/Netflix-style-movie-page-on-react/static/js/main.d203bde9.js.map",
     "787.3bb37498.chunk.js.map": "/Netflix-style-movie-page-on-react/static/js/787.3bb37498.chunk.js.map"
   },
   "entrypoints": [
-    "static/js/main.20bd0f24.js"
+    "static/js/main.d203bde9.js"
   ]
 }
