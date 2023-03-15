@@ -1,12 +1,10 @@
 import { createSlice } from "@reduxjs/toolkit";
+import { getStateFromLocalStorage } from "./stateLocalStorage";
 
 const movieSlice = createSlice({
   name: "movie",
-  initialState: {
-    hideTrailer: true,
-    like: false,
-    add: false
-  },
+  initialState: getStateFromLocalStorage(),
+  
   reducers: {
     toggleHide: state => {
       state.hideTrailer = !state.hideTrailer;
@@ -22,8 +20,8 @@ const movieSlice = createSlice({
 
 export const { toggleHide, toggleLike, toggleAdd} = movieSlice.actions;
 
-export const selectModeState = state => state.movie;
-export const selectHide = state => selectModeState(state).hideTrailer;
-export const selectLike = state => selectModeState(state).like;
-export const selectAdd = state => selectModeState(state).add;
+export const selectState = state => state.movie;
+export const selectHide = state => selectState(state).hideTrailer;
+export const selectLike = state => selectState(state).like;
+export const selectAdd = state => selectState(state).add;
 export default movieSlice.reducer;
