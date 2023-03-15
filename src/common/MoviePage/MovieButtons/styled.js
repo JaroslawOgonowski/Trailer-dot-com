@@ -1,11 +1,16 @@
 import styled, { css } from "styled-components";
 
 export const StyledButtons = styled.div`
-  display: flex;
-  height: 64px;
+  display: flex;  
   gap: 22px;
   font-family: 'Poppins', sans-serif;
   margin-bottom: 26px;
+  @media(max-width: ${({ theme }) => theme.breakPoint.minimalVersion}px) { 
+    gap:10px;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+  }
 `;
 
 export const Button = styled.button`

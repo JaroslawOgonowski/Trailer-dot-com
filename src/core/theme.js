@@ -13,6 +13,7 @@ export const theme = {
     clear: "#00000000",
     star: "#fbdd18e4",
     mainText: "#fffffff1",
-    secondaryText: "rgba(153, 153, 153, 1)"
+    secondaryText: "rgba(153, 153, 153, 1)",
+    black: "#000000",
   },
 };

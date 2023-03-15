@@ -60,6 +60,9 @@ export const MovieInformation = styled.div`
   @media(max-width: ${({ theme }) => theme.breakPoint.mobileMax}px) {
     flex-direction: column;
   };
+  @media(max-width: ${({ theme }) => theme.breakPoint.minimalVersion}px) {
+    background: linear-gradient(${({ theme }) => theme.color.buttonBackground}, ${({ theme }) => theme.color.black});
+  }
 `;
 
 export const Specification = styled.div`
@@ -100,7 +103,7 @@ export const MovieData = styled.div`
   flex-direction: column;
   margin-right: 0;
   font-size: 14px;
-`;
+ `;
 
 export const Label = styled.div`
   color:${({ theme }) => theme.color.secondaryText};

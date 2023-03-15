@@ -1,27 +1,37 @@
 import styled from "styled-components";
 export const Container = styled.div`
   margin: 54px 100px 0 100px;
-  display: grid;
-  grid-template-columns: auto auto;
+  display: flex;
+  justify-content: space-between;
   @media(max-width: ${({ theme }) => theme.breakPoint.notebook}px) {
     margin: 48px 16px 0 16px;
   };
+  @media(max-width: ${({ theme }) => theme.breakPoint.minimalVersion}px) {
+    flex-direction: column;
+    justify-content: flex-start;
+  }
   `;
 
 export const NetflixLogo = styled.img`
   max-width: 200px;
   max-height: 54px;
   `;
+
 export const Options = styled.div`
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
   gap: 60px;
   animation-name: optionsAnimation;
   animation-duration: 5s;
   animation-timing-function: linear;
+  margin-left: 50px;
   @keyframes optionsAnimation {
     0%, 90%{opacity: 0%;}
     100%{opacity: 100%}   
+  };
+  @media(max-width: ${({ theme }) => theme.breakPoint.minimalVersion}px) {
+    margin-top: 30px;
+    justify-content: center;
   };
 `;
 export const OptionsButton = styled.a`

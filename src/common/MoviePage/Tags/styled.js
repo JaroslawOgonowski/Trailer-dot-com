@@ -16,15 +16,22 @@ export const AgeGroup = styled.div`
 font-size: 14px;
 padding-left: 4px;
 padding-right: 4px;
-width: max-content;
+width: fit-content; 
 border: 1px solid ${({ theme }) => theme.color.buttonBorder};
 display: flex;
 justify-content: center;
 align-items: center;
 `;
 export const Episodes = styled.div`
-
+width: fit-content; 
+display: flex;
+align-items: center;
+@media(max-width: ${({ theme }) => theme.breakPoint.minimalVersion}px) { 
+  font-size: 8px;
+  text-align: center;
+};
 `;
+
 export const HighestStandard = styled.div`
 font-size: 11.2px;
 border: 1px solid ${({ theme }) => theme.color.buttonBorder};
