@@ -16,24 +16,29 @@ import {
   Trailer,
 } from "./styled";
 import { Tags } from "./Tags";
+import { useSelector } from "react-redux";
+import { selectHide } from "../../features/Movie/movieSlice";
 
 export const MoviePage = () => {
+  const hideTrailer = useSelector(selectHide);
+
   return (
     <StyledPage>
       <MovieBox>
         <Title>Wednesday</Title>
-        <Trailer>
+        <Trailer hideTrailer={hideTrailer}>
           <iframe width="450" height="260"
+            id="video"
             src="https://www.youtube.com/embed/Di310WS8zLk?controls=0"
             title="YouTube video player"
-            allow="accelerometer; 
+            allow="accelerometer;
             autoplay; 
             clipboard-write; 
             encrypted-media; 
             gyroscope; 
             picture-in-picture; 
             web-share"
-            >
+          >
           </iframe>
         </Trailer>
       </MovieBox>

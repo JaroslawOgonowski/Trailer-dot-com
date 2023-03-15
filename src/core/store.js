@@ -1,14 +1,13 @@
 import { configureStore } from "@reduxjs/toolkit";
 import createSagaMiddleware from "@redux-saga/core";
 import rootSaga from "./rootSaga";
-import muteSwitchReducer from "../features/MuteVideo/muteSlice";
+import movieReducer from "../features/Movie/movieSlice";
 
 
 const sagaMiddleware = createSagaMiddleware();
 const store = configureStore({
     reducer: {
-        muteSwitch: muteSwitchReducer,
-        
+        movie: movieReducer,        
     },
     middleware: [sagaMiddleware],
 });

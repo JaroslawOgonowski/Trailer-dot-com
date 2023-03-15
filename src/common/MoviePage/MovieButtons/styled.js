@@ -24,7 +24,7 @@ export const Button = styled.button`
   transition: 0.5s;
   &:hover{
     transform: scale(1.1);
-    border: 4px solid ${({ theme }) => theme.color.buttonBorderHover};
+    border: 3px solid ${({ theme }) => theme.color.buttonBorderHover};
   }
   &&{
     ${({ watch }) => watch && css`{

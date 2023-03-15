@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
 export const StyledPage = styled.div`
 margin: 146px 33% 0 100px
@@ -20,7 +20,12 @@ margin: 0;
 `;
 
 export const Trailer = styled.div`
-max-width: 200px;
+&&{
+    ${({ hideTrailer }) => hideTrailer && css`{
+      display: none;
+    }`  
+  };
+};
 `;
 
 
