@@ -4,7 +4,7 @@ import { getStateFromLocalStorage } from "./stateLocalStorage";
 const movieSlice = createSlice({
   name: "movie",
   initialState: getStateFromLocalStorage(),
-  
+
   reducers: {
     toggleHide: state => {
       state.hideTrailer = !state.hideTrailer;
@@ -18,7 +18,7 @@ const movieSlice = createSlice({
   },
 });
 
-export const { toggleHide, toggleLike, toggleAdd} = movieSlice.actions;
+export const { toggleHide, toggleLike, toggleAdd } = movieSlice.actions;
 
 export const selectState = state => state.movie;
 export const selectHide = state => selectState(state).hideTrailer;

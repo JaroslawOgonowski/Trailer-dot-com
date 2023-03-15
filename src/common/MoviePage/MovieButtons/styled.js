@@ -33,20 +33,17 @@ export const Button = styled.button`
         justify-content: center;
         color: gray;
         &&{
-    ${({ like }) => like && css`{
-        color: #e20909c5;
-        background-color: #0c0407b1;
-      }`
-    };
-  };
-      }`
-  };
+          ${({ like }) => like && css`{
+            color: #e20909c5;
+            background-color: #0c0407b1;        
+          }`};
+        };
+      }`};
   };
   &&{
     ${({ watch }) => watch && css`{
       width: 200px;
       border-radius: 32px;
-    }`
+    }`};
   };
-};
 `;

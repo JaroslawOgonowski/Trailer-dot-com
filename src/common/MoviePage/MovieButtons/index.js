@@ -8,7 +8,7 @@ export const MovieButtons = () => {
   const hideTrailer = useSelector(selectHide);
   const like = useSelector(selectLike);
   const dispatch = useDispatch();
-  
+
 
   return (
 

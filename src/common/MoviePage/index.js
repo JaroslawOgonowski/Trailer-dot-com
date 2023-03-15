@@ -27,17 +27,17 @@ export const MoviePage = () => {
       <MovieBox>
         <Title>Wednesday</Title>
         <Trailer hideTrailer={hideTrailer} width="500" height="300"
-            id="video"
-            src="https://www.youtube.com/embed/Di310WS8zLk?controls=1"
-            title="YouTube video player"
-            allow="accelerometer;
+          id="video"
+          src="https://www.youtube.com/embed/Di310WS8zLk?controls=1"
+          title="YouTube video player"
+          allow="accelerometer;
             autoplay; 
             clipboard-write; 
             encrypted-media; 
             gyroscope; 
             picture-in-picture; 
             web-share"
-          />       
+        />
       </MovieBox>
       <MovieButtons />
       <MovieInformation>

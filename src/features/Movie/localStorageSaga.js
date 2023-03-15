@@ -4,8 +4,8 @@ import { saveStateInLocalStorage } from "./stateLocalStorage";
 
 
 function* saveTasksInLocalStorageHandler() {
-    const state = yield select(selectState);
-    yield call(saveStateInLocalStorage, state);
+  const state = yield select(selectState);
+  yield call(saveStateInLocalStorage, state);
 }
 
 export function* localStorageSaga() {
