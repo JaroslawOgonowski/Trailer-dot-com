@@ -1,23 +1,21 @@
 {
   "files": {
-    "main.js": "/Netflix-style-movie-page-on-react/static/js/main.7b59ecd6.js",
+    "main.js": "/Netflix-style-movie-page-on-react/static/js/main.20bd0f24.js",
     "static/js/787.3bb37498.chunk.js": "/Netflix-style-movie-page-on-react/static/js/787.3bb37498.chunk.js",
     "static/media/thirdImage.png": "/Netflix-style-movie-page-on-react/static/media/thirdImage.ac8f359ed4d85960544d.png",
     "static/media/secondImage.png": "/Netflix-style-movie-page-on-react/static/media/secondImage.66e736bdd925aa090485.png",
     "static/media/firstImage.png": "/Netflix-style-movie-page-on-react/static/media/firstImage.c2956bcf6d68dbb2e6c7.png",
     "static/media/Top10.svg": "/Netflix-style-movie-page-on-react/static/media/Top10.b2829cec8e88c1f605d9fa4342e098ab.svg",
-    "static/media/Like.svg": "/Netflix-style-movie-page-on-react/static/media/Like.8a97f3b09d1854fdb38c150243d3a3b3.svg",
     "static/media/Audio.svg": "/Netflix-style-movie-page-on-react/static/media/Audio.e87f2854d759a8654b9689cf904ebbaa.svg",
     "static/media/NetflixLogo.svg": "/Netflix-style-movie-page-on-react/static/media/NetflixLogo.2a139252e1a3db91c811494f800e04f2.svg",
     "index.html": "/Netflix-style-movie-page-on-react/index.html",
-    "static/media/SoundOff.svg": "/Netflix-style-movie-page-on-react/static/media/SoundOff.a6701a79ee0d13866af07defbd8c27fb.svg",
     "static/media/SubtitlesIcon.svg": "/Netflix-style-movie-page-on-react/static/media/SubtitlesIcon.7ca023ef2f558604c328fc54e32a2caa.svg",
-    "static/media/SoundOn.svg": "/Netflix-style-movie-page-on-react/static/media/SoundOn.21fc84b0176991e2badffa36b692624b.svg",
+    "static/media/Like.svg": "/Netflix-style-movie-page-on-react/static/media/Like.48a71ad1fd2be2f7f5e78ed7a81c1147.svg",
     "static/media/Add.svg": "/Netflix-style-movie-page-on-react/static/media/Add.de904cd6b324cd137e2528d219257f17.svg",
-    "main.7b59ecd6.js.map": "/Netflix-style-movie-page-on-react/static/js/main.7b59ecd6.js.map",
+    "main.20bd0f24.js.map": "/Netflix-style-movie-page-on-react/static/js/main.20bd0f24.js.map",
     "787.3bb37498.chunk.js.map": "/Netflix-style-movie-page-on-react/static/js/787.3bb37498.chunk.js.map"
   },
   "entrypoints": [
-    "static/js/main.7b59ecd6.js"
+    "static/js/main.20bd0f24.js"
   ]
 }
