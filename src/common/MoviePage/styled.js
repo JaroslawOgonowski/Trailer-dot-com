@@ -28,7 +28,6 @@ export const Trailer = styled.div`
 };
 `;
 
-
 export const MovieInformation = styled.div`
 font-family: 'Segoe UI';
 font-style: normal;

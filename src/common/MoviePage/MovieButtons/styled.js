@@ -27,10 +27,26 @@ export const Button = styled.button`
     border: 3px solid ${({ theme }) => theme.color.buttonBorderHover};
   }
   &&{
+    ${({ likeButton }) => likeButton && css`{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: gray;
+        &&{
+    ${({ like }) => like && css`{
+        color: red;
+        background-color: #0c0407b1;
+      }`
+    };
+  };
+      }`
+  };
+  };
+  &&{
     ${({ watch }) => watch && css`{
       width: 200px;
       border-radius: 32px;
-    }`  
+    }`
   };
 };
 `;
