@@ -42,7 +42,7 @@ export const Button = styled.button`
             color: ${({ theme }) => theme.color.star};
             background-color: ${({ theme }) => theme.color.buttonBackground};
             border-color: ${({ theme }) => theme.color.buttonBorder};
-                    
+                               
           }`};
         };
       }`};

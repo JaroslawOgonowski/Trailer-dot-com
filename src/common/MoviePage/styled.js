@@ -62,7 +62,8 @@ export const MovieInformation = styled.div`
   };
   @media(max-width: ${({ theme }) => theme.breakPoint.minimalVersion}px) {
     background: linear-gradient(${({ theme }) => theme.color.buttonBackground}, ${({ theme }) => theme.color.black});
-  }
+    padding: 8px;
+  };
 `;
 
 export const Specification = styled.div`
