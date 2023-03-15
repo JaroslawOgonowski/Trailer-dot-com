@@ -3,6 +3,7 @@ import { ReactComponent as Top10 } from "./images/Top10.svg";
 import {
   Content,
   Description,
+  Item,
   Label,
   MovieBox,
   MovieData,
@@ -17,21 +18,27 @@ import {
 } from "./styled";
 import { Tags } from "./Tags";
 import { useSelector } from "react-redux";
-import { selectHide } from "../../features/Movie/movieSlice";
+import { selectHide, selectMovie, selectState } from "../../features/Movie/movieSlice";
 
 export const MoviePage = () => {
   const hideTrailer = useSelector(selectHide);
-
+  const load = useSelector(selectState);
+  const movie = useSelector(selectMovie)
+  if (load.success===true) 
   return (
     <StyledPage>
-      <MovieBox>
-        <Title>Wednesday</Title>
+      {movie.map(movie => ( 
+      <Item key={movie.name}>
+      <MovieBox >        
+        <Title>{movie.title}</Title>
         <Trailer 
           hideTrailer={hideTrailer} 
           width="" 
           height=""
           id="video"
-          src="https://www.youtube.com/embed/Di310WS8zLk?controls=1"
+          SameSite="none" 
+          Secure
+          src={movie.iFrame}
           title="YouTube video player"
           allow="accelerometer;
             autoplay; 
@@ -46,19 +53,22 @@ export const MoviePage = () => {
       <MovieInformation>
         <Specification>
           <Tags />
-          <Top><Top10 /><Content>#1 in TV Shows Today</Content></Top>
-          <Subtitle>"A Murder of Woes"</Subtitle>
+          <Top><Top10 /><Content>{movie.topContent}</Content></Top>
+          <Subtitle>{movie.subtitle}</Subtitle>
           <Description>
-            Wednesday lands in trouble with Principal Weems, but that's just the start of her problems.
-            To fight an ancient evil, she'll need all her friends' help.
+            {movie.description}
           </Description>
         </Specification>
         <MovieData>
-          <Label>Cast:<OtherInfo>{" "}Jenna Ortega, Gwendoline Christie, Riki Lindhome and more</OtherInfo></Label>
-          <Label>Genres:<OtherInfo>{" "}TV Mysteries, Crime TV Shows, Fantasy TV Shows</OtherInfo></Label>
-          <Label>This show is:<OtherInfo>{" "}Deadpan</OtherInfo></Label>
+          <Label>Cast:<OtherInfo>{" "}{movie.cast}</OtherInfo></Label>
+          <Label>Genres:<OtherInfo>{" "}{movie.genres}</OtherInfo></Label>
+          <Label>This show is:<OtherInfo>{" "}{movie.thisShowIs}</OtherInfo></Label>
         </MovieData>
       </MovieInformation>
+      </Item>
+      ))}
     </StyledPage>
-  );
+    
+  )
+  else return;
 };

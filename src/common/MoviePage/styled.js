@@ -1,10 +1,13 @@
 import styled, { css } from "styled-components";
 
-export const StyledPage = styled.div`
+export const StyledPage = styled.ul`
   margin: 146px 100px 0 100px;
   @media(max-width: ${({ theme }) => theme.breakPoint.notebook}px) {
     margin: 48px 16px 0 16px;
   };
+`;
+export const Item = styled.li`
+text-decoration: none;
 `;
 
 export const MovieBox = styled.div`

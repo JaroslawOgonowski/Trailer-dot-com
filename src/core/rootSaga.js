@@ -1,8 +1,8 @@
 import { all } from "redux-saga/effects";
-import { localStorageSaga } from "../features/Movie/localStorageSaga";
+import { moviesSaga } from "../features/Movie/moviesSaga";
 
 export default function* rootSaga() {
     yield all([
-        localStorageSaga()
+        moviesSaga()
     ]);
 };
