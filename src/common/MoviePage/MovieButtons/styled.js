@@ -54,3 +54,8 @@ export const Button = styled.button`
     }`};
   };
 `;
+
+export const Box = styled.div`
+  display: flex;
+  gap: 10px;
+`;
