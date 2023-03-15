@@ -34,7 +34,7 @@ export const Button = styled.button`
         color: gray;
         &&{
     ${({ like }) => like && css`{
-        color: red;
+        color: #e20909c5;
         background-color: #0c0407b1;
       }`
     };

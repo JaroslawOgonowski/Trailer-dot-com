@@ -26,10 +26,9 @@ export const MoviePage = () => {
     <StyledPage>
       <MovieBox>
         <Title>Wednesday</Title>
-        <Trailer hideTrailer={hideTrailer}>
-          <iframe width="450" height="260"
+        <Trailer hideTrailer={hideTrailer} width="500" height="300"
             id="video"
-            src="https://www.youtube.com/embed/Di310WS8zLk?controls=0"
+            src="https://www.youtube.com/embed/Di310WS8zLk?controls=1"
             title="YouTube video player"
             allow="accelerometer;
             autoplay; 
@@ -38,9 +37,7 @@ export const MoviePage = () => {
             gyroscope; 
             picture-in-picture; 
             web-share"
-          >
-          </iframe>
-        </Trailer>
+          />       
       </MovieBox>
       <MovieButtons />
       <MovieInformation>

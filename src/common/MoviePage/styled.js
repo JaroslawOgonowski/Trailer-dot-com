@@ -19,7 +19,7 @@ font-size: 330px;
 margin: 0;
 `;
 
-export const Trailer = styled.div`
+export const Trailer = styled.iframe`
 &&{
     ${({ hideTrailer }) => hideTrailer && css`{
       display: none;
