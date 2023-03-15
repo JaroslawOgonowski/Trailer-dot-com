@@ -15,7 +15,7 @@ export const Button = styled.button`
   align-items: center;
   justify-content: center;
   background-color:${({ theme }) => theme.color.buttonBackground};
-  color: white;
+  color: ${({ theme }) => theme.color.mainText};
   border-radius: 50%;
   border: 3px solid ${({ theme }) => theme.color.buttonBorder};
   cursor: pointer;
@@ -34,8 +34,10 @@ export const Button = styled.button`
         color: gray;
         &&{
           ${({ like }) => like && css`{
-            color: #e20909c5;
-            background-color: #0c0407b1;        
+            color: ${({ theme }) => theme.color.star};
+            background-color: ${({ theme }) => theme.color.buttonBackground};
+            border-color: ${({ theme }) => theme.color.buttonBorder};
+                    
           }`};
         };
       }`};

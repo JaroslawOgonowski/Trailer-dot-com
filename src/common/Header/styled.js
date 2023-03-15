@@ -3,6 +3,9 @@ export const Container = styled.div`
   margin: 54px 100px 0 100px;
   display: grid;
   grid-template-columns: auto auto;
+  @media(max-width: ${({ theme }) => theme.breakPoint.notebook}px) {
+    margin: 48px 16px 0 16px;
+  };
   `;
 
 export const NetflixLogo = styled.img`
@@ -30,7 +33,7 @@ export const OptionsButton = styled.a`
   border: none;
   cursor: pointer;
   gap: 8px;
-  color: #FFFFFF;
+  color: ${({ theme }) => theme.color.mainText};
   font-family: 'Roboto', sans-serif;
   font-style: normal;
   font-weight: 500;

@@ -26,7 +26,10 @@ export const MoviePage = () => {
     <StyledPage>
       <MovieBox>
         <Title>Wednesday</Title>
-        <Trailer hideTrailer={hideTrailer} width="500" height="300"
+        <Trailer 
+          hideTrailer={hideTrailer} 
+          width="" 
+          height=""
           id="video"
           src="https://www.youtube.com/embed/Di310WS8zLk?controls=1"
           title="YouTube video player"

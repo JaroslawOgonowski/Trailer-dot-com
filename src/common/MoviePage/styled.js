@@ -1,39 +1,65 @@
 import styled, { css } from "styled-components";
 
 export const StyledPage = styled.div`
-  margin: 146px 100px 0 100px
+  margin: 146px 100px 0 100px;
+  @media(max-width: ${({ theme }) => theme.breakPoint.notebook}px) {
+    margin: 48px 16px 0 16px;
+  };
 `;
 
 export const MovieBox = styled.div`
   display: flex;
   align-items: center;
   gap: 180px;
+  @media(max-width: ${({ theme }) => theme.breakPoint.fullPage}px) {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0;
+  };
 `;
 
 export const Title = styled.h1`
-  color: #FFFFFF;
+  color: ${({ theme }) => theme.color.mainText};
   font-family: 'Stranger back in the Night', sans-serif;                                                
   font-style: normal;
   font-weight: 400;
   font-size: 250px;
   margin: 0;
   padding-bottom: 80px;
+  @media(max-width: ${({ theme }) => theme.breakPoint.minimalVersion}px) { 
+    align-self: center;
+    padding-bottom: 0;
+    font-size: 120px;
+  }
 `;
 
 export const Trailer = styled.iframe`
+width: 500px;
+height: 300px;
   &&{
     ${({ hideTrailer }) => hideTrailer && css`{
       display: none;
     }`};
   };
+  @media(max-width: ${({ theme }) => theme.breakPoint.fullPage}px) {
+    margin-bottom: 46px;
+  };
+  @media(max-width: ${({ theme }) => theme.breakPoint.minimalVersion}px) { 
+    width: 250px;
+    height:150px;
+    align-self: center;
+  }
 `;
 
 export const MovieInformation = styled.div`
   font-family: 'Segoe UI';
   font-style: normal;
-  color: #FFFFFF;
+  color: ${({ theme }) => theme.color.mainText};
   display: flex;
   gap: 45px;
+  @media(max-width: ${({ theme }) => theme.breakPoint.mobileMax}px) {
+    flex-direction: column;
+  };
 `;
 
 export const Specification = styled.div`
@@ -77,14 +103,12 @@ export const MovieData = styled.div`
 `;
 
 export const Label = styled.div`
-  color:rgba(153, 153, 153, 1);
+  color:${({ theme }) => theme.color.secondaryText};
   max-width: 240px;
-  max-height: 40px;
   margin-bottom: 14px;
 `;
 
 export const OtherInfo = styled.span`
-  line-height: 20px;
   color: white;
   margin-bottom: 14px;
 `;
