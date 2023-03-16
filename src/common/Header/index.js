@@ -1,26 +1,39 @@
 import { useDispatch, useSelector } from "react-redux";
-import { fetchMovie, selectLoading } from "../../features/Movie/movieSlice";
+import { fetchMovies, getMovieByTitle, selectMenu, selectMovie, selectMovies, toggleMenu, toggleMovie } from "../../features/Movie/movieSlice";
 import { ReactComponent as NetflixLogo } from "./images/NetflixLogo.svg";
-import { Container, Menu, Options, OptionsButton } from "./styled"
+import { Container, Item, Menu, Options, OptionsButton } from "./styled"
+import { useEffect } from "react";
+
 export const Header = () => {
 
   const dispatch = useDispatch();
-  const Loading = useSelector(selectLoading);
+  const selectedMovie = useSelector(selectMovies);  
+  const hideMenu = useSelector(selectMenu);
+
+  useEffect(() => {
+    dispatch((fetchMovies()));
+  }, [dispatch]);
 
   return (
-    <Container>
-      <NetflixLogo alt="" />
+    <>
+      <Container>
+        <NetflixLogo alt="" />
+      </Container>
       <Options>
         <OptionsButton target="_blank" href="https://www.netflix.com/pl/">
           Home
         </OptionsButton>
         <Menu
-          onClick={() => dispatch(fetchMovie())}
-          disabled={Loading}
+          onClick={() => dispatch(toggleMenu())}
         >
-          {Loading ? "Ładowanie..." : "Get movie ⁞⁞⁞"}
+          Get movie ⁞⁞
+          {selectedMovie.map(movie => (
+            <Item hide={hideMenu} key={movie.name} onClick={()=>dispatch(toggleMovie(movie.id))}>
+              {movie.title}
+            </Item>
+          ))}
         </Menu>
       </Options>
-    </Container>
+    </>
   );
 };

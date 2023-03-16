@@ -1,15 +1,15 @@
 import { call, takeEvery, select, put, takeLatest } from "redux-saga/effects"
 import { getMovie } from "./getMovie";
-import { fetchMovie, fetchMovieError,  fetchMovieSuccess,  selectState } from "./movieSlice";
+import { fetchMovies, fetchMoviesError,  fetchMoviesSuccess,  selectState } from "./movieSlice";
 import { saveStateInLocalStorage } from "./stateLocalStorage";
 
-function* fetchMovieHandler() {
+function* fetchMoviesHandler() {
   try {
       const movie = yield call(getMovie);
-      yield put(fetchMovieSuccess(movie));
+      yield put(fetchMoviesSuccess(movie));
   }
   catch (error) {
-      yield put(fetchMovieError());
+      yield put(fetchMoviesError());
       yield call(alert, "Błąd pobierania, spróbuj ponownie lub sprawdź połączenie z internetem")
   }}
 
@@ -20,5 +20,5 @@ function* saveTasksInLocalStorageHandler() {
 
 export function* moviesSaga() {
   yield takeEvery("*", saveTasksInLocalStorageHandler);
-  yield takeLatest(fetchMovie.type, fetchMovieHandler);
+  yield takeLatest(fetchMovies.type, fetchMoviesHandler);
 };

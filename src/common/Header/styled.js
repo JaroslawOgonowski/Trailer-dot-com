@@ -1,28 +1,20 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 export const Container = styled.div`
   margin: 54px 100px 0 100px;
-  display: flex;
-  justify-content: space-between;
+
   @media(max-width: ${({ theme }) => theme.breakPoint.notebook}px) {
     margin: 48px 16px 0 16px;
   };
-  @media(max-width: ${({ theme }) => theme.breakPoint.minimalVersion}px) {
-    flex-direction: column;
-    justify-content: flex-start;
-  }
-  `;
-
-export const NetflixLogo = styled.img`
-  max-width: 200px;
-  max-height: 54px;
-  `;
+`
 
 export const Options = styled.div`
+  position: fixed;
+  top:54px;
+  right: 50px;
   display: flex;
-  justify-content: space-between;
-  gap: 60px;
+  gap: 30px;
   animation-name: optionsAnimation;
-  animation-duration: 5s;
+  animation-duration: 1s;
   animation-timing-function: linear;
   @keyframes optionsAnimation {
     0%, 90%{opacity: 0%;}
@@ -36,44 +28,55 @@ export const Options = styled.div`
   };
 `;
 export const OptionsButton = styled.a`
+color: ${({ theme }) => theme.color.menuText};
   text-decoration:none;
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
   background: none;
   border: none;
   cursor: pointer;
   gap: 8px;
-  color: ${({ theme }) => theme.color.mainText};
   font-family: 'Roboto', sans-serif;
   font-style: normal;
   font-weight: 500;
-  font-size: 18px;
+  font-size: 20px;
   transition: 0.5s;
   &:hover{
     transform: scale(1.2);
+    color: ${({ theme }) => theme.color.mainText};
   };
 `;
 
 export const Menu = styled.ul`
   padding: 0;
+  list-style: none;
   margin: 0;
   text-decoration:none;
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  flex-wrap: nowrap;
   background: none;
   border: none;
   cursor: pointer;
-  gap: 8px;
-  color: ${({ theme }) => theme.color.mainText};
+  gap: 20px;
+  color: ${({ theme }) => theme.color.menuText};
   font-family: 'Roboto', sans-serif;
   font-style: normal;
   font-weight: 500;
-  font-size: 18px;
+  font-size: 20px;
   transition: 0.5s;
   &:hover{
+    color: ${({ theme }) => theme.color.mainText};
     transform: scale(1.2);
-  };
+    };
 `
+
+export const Item = styled.li`
+text-decoration: none;
+margin-top: 10px;
+
+&&{
+    ${({ hide }) => hide && css`{
+      display: none;
+    }`};
+  };
+
+&:hover{
+  color: ${({ theme }) => theme.color.hoverRed};
+}
+`;

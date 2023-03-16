@@ -95,10 +95,6 @@ export const Top = styled.div`
   color: white;
 `;
 
-export const Content = styled.div`
-  margin-left: 11px;
-`;
-
 export const Subtitle = styled.div`
   font-size: 20px;
   margin-top: 20px;

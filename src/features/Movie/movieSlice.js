@@ -5,12 +5,13 @@ const movieSlice = createSlice({
   name: "actualState",
   initialState: {
     loading: false,
-    movie: [],
+    movies: [],
     hideTrailer: true,
     like: false,
     add: false,
-    status: null
-  },
+    status: null,
+    hideMenu: true,
+    },
 
   reducers: {
     toggleHide: state => {
@@ -22,26 +23,38 @@ const movieSlice = createSlice({
     toggleAdd: state => {
       state.add = !state.add
     },
-    fetchMovie: (state) => {
+    fetchMovies: (state) => {
       state.loading = true;
     },
-    fetchMovieSuccess: (state, { payload: movie }) => {
+    fetchMoviesSuccess: (state, { payload: movies }) => {
       state.success = true;
       state.loading = false;
-      state.movie = movie;
+      state.movies = movies;
     },
-    fetchMovieError: (state) => {
+    fetchMoviesError: (state) => {
       state.loading = false;
-    }
+    },
+    toggleMenu: state => {
+      state.hideMenu = !state.hideMenu;
+    },
+    toggleMovie: (state, action) => {
+          const index = state.movies.findIndex(selectedMovie => selectedMovie.id === action.payload);      
+          state.title=state.movies[index].title;
+        }
   },
 });
 
-export const { toggleHide, toggleLike, toggleAdd, fetchMovie, fetchMovieSuccess, fetchMovieError } = movieSlice.actions;
+export const { toggleHide, toggleMovie, toggleMenu, toggleLike, toggleAdd, fetchMovies, fetchMoviesSuccess, fetchMoviesError } = movieSlice.actions;
 
 export const selectState = state => state.movie;
 export const selectHide = state => selectState(state).hideTrailer;
 export const selectLike = state => selectState(state).like;
 export const selectAdd = state => selectState(state).add;
 export const selectLoading = (state) => selectState(state).loading;
-export const selectMovie = (state) => selectState(state).movie;
+export const selectMovies = (state) => selectState(state).movies;
+export const selectMenu = (state) => selectState(state).hideMenu;
+export const selectTitle = (state) => selectState(state).title;
+export const getMovieByTitle = (state, movieTitle) =>
+    selectMovies(state).find(({ title }) => title === movieTitle);
+
 export default movieSlice.reducer;

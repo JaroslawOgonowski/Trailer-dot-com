@@ -22,7 +22,7 @@ export const Button = styled.button`
   align-items: center;
   justify-content: center;
   background-color:${({ theme }) => theme.color.buttonBackground};
-  color: ${({ theme }) => theme.color.mainText};
+  color: ${({ theme }) => theme.color.secondaryText};
   border-radius: 50%;
   border: 3px solid ${({ theme }) => theme.color.buttonBorder};
   cursor: pointer;
@@ -32,6 +32,7 @@ export const Button = styled.button`
   &:hover{
     transform: scale(1.1);
     border: 3px solid ${({ theme }) => theme.color.buttonBorderHover};
+    color: ${({ theme }) => theme.color.mainText};
   }
   &&{
     ${({ likeButton }) => likeButton && css`{
