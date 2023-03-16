@@ -40,7 +40,7 @@ const movieSlice = createSlice({
     toggleMovie: (state, action) => {
           const index = state.movies.findIndex(selectedMovie => selectedMovie.id === action.payload);      
           state.title=state.movies[index].title;
-        }
+        },
   },
 });
 
@@ -54,7 +54,5 @@ export const selectLoading = (state) => selectState(state).loading;
 export const selectMovies = (state) => selectState(state).movies;
 export const selectMenu = (state) => selectState(state).hideMenu;
 export const selectTitle = (state) => selectState(state).title;
-export const getMovieByTitle = (state, movieTitle) =>
-    selectMovies(state).find(({ title }) => title === movieTitle);
 
 export default movieSlice.reducer;

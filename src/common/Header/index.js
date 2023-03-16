@@ -1,5 +1,5 @@
 import { useDispatch, useSelector } from "react-redux";
-import { fetchMovies, getMovieByTitle, selectMenu, selectMovie, selectMovies, toggleMenu, toggleMovie } from "../../features/Movie/movieSlice";
+import { fetchMovies,  selectMenu, selectMovies, toggleMenu, toggleMovie } from "../../features/Movie/movieSlice";
 import { ReactComponent as NetflixLogo } from "./images/NetflixLogo.svg";
 import { Container, Item, Menu, Options, OptionsButton } from "./styled"
 import { useEffect } from "react";

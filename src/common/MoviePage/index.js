@@ -1,8 +1,13 @@
 import MovieButtons from "./MovieButtons";
 import { ReactComponent as Top10 } from "./images/Top10.svg";
+import { ReactComponent as Audio } from "./images/Audio.svg";
+import { ReactComponent as SubtitlesIcon } from "./images/SubtitlesIcon.svg";
 import {
-  Content,
+  AgeGroup,
+  AudioStream,
   Description,
+  Episodes,
+  HighestStandard,
   Item,
   Label,
   MovieBox,
@@ -12,11 +17,13 @@ import {
   Specification,
   StyledPage,
   Subtitle,
+  Subtitles,
+  Tags,
   Title,
   Top,
   Trailer,
+  Year,
 } from "./styled";
-import { Tags } from "./Tags";
 import { useSelector } from "react-redux";
 import { selectHide, selectMovies, selectTitle } from "../../features/Movie/movieSlice";
 
@@ -25,7 +32,7 @@ export const MoviePage = () => {
   const movie = useSelector(selectMovies);
   const title = useSelector(selectTitle);
 
-  const selectedMovie = movie.filter(element => element.title === title)
+  const selectedMovie = movie.filter(element => element.title === title);
 
   if (title != null)
     return (
@@ -33,7 +40,7 @@ export const MoviePage = () => {
         {selectedMovie.map(movie => (
           <Item key={movie.name}>
             <MovieBox >
-              <Title>{movie.title}</Title>
+              <Title hideTrailer={hideTrailer}>{movie.title}</Title>
               <Trailer
                 hideTrailer={hideTrailer}
                 width=""
@@ -55,7 +62,14 @@ export const MoviePage = () => {
             <MovieButtons />
             <MovieInformation>
               <Specification>
-                <Tags />
+                <Tags>
+                  <Year>{movie.tagYear}</Year>
+                  <AgeGroup>{movie.tagGroup}</AgeGroup>
+                  <Episodes>{movie.tagEpisodes}</Episodes>
+                  <HighestStandard>{movie.tagStandard}</HighestStandard>
+                  <AudioStream>{movie.tagAudio ? <Audio /> : null}</AudioStream>
+                  <Subtitles>{movie.tagSubtitles ? <SubtitlesIcon /> : null}</Subtitles>
+                </Tags>
                 <Top>{movie.top10 ? <Top10 /> : null}{movie.topContent}</Top>
                 <Subtitle>{movie.subtitle}</Subtitle>
                 <Description>

@@ -22,13 +22,19 @@
     "name": "spider-man",
     "title": "Spider-man",
     "id": "spider-man",
-    "topContent": "#1261 in TV Shows Today",
+    "topContent": "#1261 in Movies Today",
     "top10": false,
     "subtitle": "Best spidey ever",
     "description": "After being bitten by a genetically-modified spider, a shy teenager gains spider-like abilities that he uses to fight injustice as a masked superhero and face a vengeful enemy.",
     "cast": "Tobey Maguire, Kirsten Dunst, Willem Dafoe, James Franco",
     "genres": "Superhero, Marvel, Fantasy, Action",
     "thisShowIs": "Breath-taking",
-    "iFrame": "https://www.youtube.com/embed/t06RUxPbp_c"
+    "iFrame": "https://www.youtube.com/embed/t06RUxPbp_c",
+    "tagYear": "2002",
+    "tagGroup": "16+",
+    "tagEpisodes": "MOVIE",
+    "tagStandard": "4K",
+    "tagAudio": true,
+    "tagSubtitles": false
   }
 ]
