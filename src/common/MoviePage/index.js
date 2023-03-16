@@ -20,6 +20,7 @@ import { Tags } from "./Tags";
 import { useSelector } from "react-redux";
 import { selectHide, selectMovie, selectState } from "../../features/Movie/movieSlice";
 
+
 export const MoviePage = () => {
   const hideTrailer = useSelector(selectHide);
   const load = useSelector(selectState);
@@ -66,8 +67,9 @@ export const MoviePage = () => {
         </MovieData>
       </MovieInformation>
       </Item>
-      ))}
+      ))}      
     </StyledPage>
+    
     
   )
   else return;

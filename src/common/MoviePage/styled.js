@@ -4,6 +4,7 @@ export const StyledPage = styled.ul`
   margin: 146px 100px 0 100px;
   @media(max-width: ${({ theme }) => theme.breakPoint.notebook}px) {
     margin: 48px 16px 0 16px;
+    padding: 0;
   };
 `;
 export const Item = styled.li`
@@ -14,10 +15,14 @@ export const MovieBox = styled.div`
   display: flex;
   align-items: center;
   gap: 180px;
+  margin-bottom: 100px;
   @media(max-width: ${({ theme }) => theme.breakPoint.fullPage}px) {
     flex-direction: column;
     align-items: flex-start;
     gap: 0;
+  };
+  @media(max-width: ${({ theme }) => theme.breakPoint.minimalVersion}px) {
+    margin-bottom: 50px;
   };
 `;
 
@@ -32,7 +37,8 @@ export const Title = styled.h1`
   @media(max-width: ${({ theme }) => theme.breakPoint.minimalVersion}px) { 
     align-self: center;
     padding-bottom: 0;
-    font-size: 120px;
+    font-size: 160px;
+    margin-bottom: 80px;
   }
 `;
 
@@ -51,6 +57,7 @@ height: 300px;
     width: 250px;
     height:150px;
     align-self: center;
+    margin-bottom: 80px;
   }
 `;
 

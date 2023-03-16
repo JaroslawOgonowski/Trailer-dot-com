@@ -24,14 +24,15 @@ export const Options = styled.div`
   animation-name: optionsAnimation;
   animation-duration: 5s;
   animation-timing-function: linear;
-  margin-left: 50px;
   @keyframes optionsAnimation {
     0%, 90%{opacity: 0%;}
     100%{opacity: 100%}   
   };
   @media(max-width: ${({ theme }) => theme.breakPoint.minimalVersion}px) {
     margin-top: 30px;
-    justify-content: center;
+    justify-content: flex-end;
+    align-items: flex-end;
+    gap: 20px;
   };
 `;
 export const OptionsButton = styled.a`
@@ -53,3 +54,26 @@ export const OptionsButton = styled.a`
     transform: scale(1.2);
   };
 `;
+
+export const Menu = styled.ul`
+  padding: 0;
+  margin: 0;
+  text-decoration:none;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-wrap: nowrap;
+  background: none;
+  border: none;
+  cursor: pointer;
+  gap: 8px;
+  color: ${({ theme }) => theme.color.mainText};
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  transition: 0.5s;
+  &:hover{
+    transform: scale(1.2);
+  };
+`

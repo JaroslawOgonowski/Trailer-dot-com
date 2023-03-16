@@ -5,11 +5,13 @@ export const StyledButtons = styled.div`
   gap: 22px;
   font-family: 'Poppins', sans-serif;
   margin-bottom: 26px;
+  margin-bottom: 100px;
   @media(max-width: ${({ theme }) => theme.breakPoint.minimalVersion}px) { 
-    gap:10px;
+    gap:20px 50px;
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
+    margin-bottom: 80px;
   }
 `;
 
