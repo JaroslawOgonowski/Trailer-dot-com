@@ -4,6 +4,7 @@ import { MoviePage } from "../common/MoviePage";
 import { GlobalStyle } from "./GlobalStyle";
 import { Footer } from "../common/Footer";
 import { theme } from "./theme";
+import Background from "../common/Background";
 
 function App() {
 
@@ -11,9 +12,11 @@ function App() {
     <ThemeProvider theme={theme}>
       <>
         <GlobalStyle />
-        <Header />
-        <MoviePage />
-        <Footer/>
+        <Background>
+          <Header />
+          <MoviePage />
+          <Footer />
+        </Background>
       </>
     </ThemeProvider>
   );

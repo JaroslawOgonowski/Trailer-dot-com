@@ -1,6 +1,7 @@
 import styled, { css } from "styled-components";
 
 export const StyledPage = styled.ul`
+list-style: none;
   margin: 146px 100px 0 100px;
   @media(max-width: ${({ theme }) => theme.breakPoint.notebook}px) {
     margin: 48px 16px 0 16px;
@@ -8,7 +9,7 @@ export const StyledPage = styled.ul`
   };
 `;
 export const Item = styled.li`
-text-decoration: none;
+
 `;
 
 export const MovieBox = styled.div`
@@ -67,6 +68,7 @@ export const MovieInformation = styled.div`
   color: ${({ theme }) => theme.color.mainText};
   display: flex;
   gap: 45px;
+    padding: 8px;
   @media(max-width: ${({ theme }) => theme.breakPoint.mobileMax}px) {
     flex-direction: column;
   };

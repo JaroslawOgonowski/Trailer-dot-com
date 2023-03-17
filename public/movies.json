@@ -16,7 +16,13 @@
     "tagStandard": "HD",
     "tagAudio": true,
     "tagSubtitles": true,
-    "iFrame": "https://www.youtube.com/embed/Di310WS8zLk?controls=1"
+    "iFrame": "https://www.youtube.com/embed/Di310WS8zLk?controls=1",
+    "firstBackground": "https://images.alphacoders.com/128/1289451.jpg",
+    "firstPositionX": "77.5%",
+    "secondBackground": "https://images.alphacoders.com/129/1294076.jpg",
+    "secondPositionX": "82%%",
+    "thirdBackground": "https://images7.alphacoders.com/128/1289555.png",
+    "thirdPositionX": "49%"
   },
   {
     "name": "spider-man",
@@ -35,6 +41,12 @@
     "tagEpisodes": "MOVIE",
     "tagStandard": "4K",
     "tagAudio": true,
-    "tagSubtitles": false
+    "tagSubtitles": false,
+    "firstBackground": "https://images8.alphacoders.com/430/430003.jpg",
+    "firstPositionX": "0%",
+    "secondBackground": "https://images.alphacoders.com/104/1042114.png",
+    "secondPositionX": "25%",
+    "thirdBackground": "https://images6.alphacoders.com/490/490908.jpg",
+    "thirdPositionX": "50%"
   }
 ]
