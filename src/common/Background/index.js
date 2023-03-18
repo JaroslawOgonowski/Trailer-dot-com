@@ -13,6 +13,7 @@ const Background = ({ children }) => {
         <ul>
           {selectedMovie.map(movie => (
             <StyledBackground key={movie.id}
+              name={movie.name}
               firstBackground={movie.firstBackground}
               firstPositionX={movie.firstPositionX}
               secondBackground={movie.secondBackground}
