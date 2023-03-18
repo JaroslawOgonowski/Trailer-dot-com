@@ -24,7 +24,7 @@ export const StyledBackground = styled.li`
   };
 `;
 
-export const ClasicBackground= styled.li`
+export const ClasicBackground= styled.div`
   position: absolute;
   top:0;
   right: 0;
@@ -32,16 +32,16 @@ export const ClasicBackground= styled.li`
   background-repeat: no-repeat;
   background-size: cover;  
   animation-name: classicBackgroundAnimation;
-  animation-duration: 35s;
+  animation-duration: 30s;
   animation-iteration-count: infinite;
   animation-timing-function: linear;
   @keyframes classicBackgroundAnimation {
     0%, 25%{background-image: url(https://wallpaperaccess.com/full/2063938.png);    
     background-position-x: 50%;}
-    30%, 60%{background-image: url(https://blog.frame.io/wp-content/uploads/2022/04/B0414-featured-image-atomos-v2-1300x731.jpg);
-    background-position-x: 50%;}
-    65%, 90% {background-image: url(https://wallpapercave.com/wp/2TrmmSi.jpg);
+    30%, 60%{background-image: url(https://wallpapercave.com/wp/2TrmmSi.jpg);
     background-position-x: 30%;}
+    65%, 90% {background-image: url(https://blog.frame.io/wp-content/uploads/2022/04/B0414-featured-image-atomos-v2-1300x731.jpg);
+    background-position-x: 90%;}
     95%, 100%{background-image: url(https://wallpaperaccess.com/full/2063938.png);
     background-position-x:50%;}   
 };
