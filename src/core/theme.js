@@ -3,8 +3,7 @@ export const theme = {
     fullPage: 1330,
     notebook: 950,
     mobileMax: 767,
-    minimalVersion: 550,
-
+    minimalVersion: 550
   },
   color: {
     buttonBackground: "rgba(42, 42, 42, 0.26)",

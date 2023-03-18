@@ -28,7 +28,6 @@ const Background = ({ children }) => {
       </>
     )
   else return (
-
     <ClasicBackground>
       {children}
     </ClasicBackground>

@@ -8,7 +8,6 @@ import {
   Description,
   Episodes,
   HighestStandard,
-  Item,
   Label,
   MovieBox,
   MovieData,
@@ -31,14 +30,13 @@ export const MoviePage = () => {
   const hideTrailer = useSelector(selectHide);
   const movie = useSelector(selectMovies);
   const title = useSelector(selectTitle);
-
   const selectedMovie = movie.filter(element => element.title === title);
 
   if (title != null)
     return (
       <StyledPage>
         {selectedMovie.map(movie => (
-          <Item key={movie.name}>
+          <li key={movie.name}>
             <MovieBox >
               <Title hideTrailer={hideTrailer}>{movie.title}</Title>
               <Trailer
@@ -82,11 +80,9 @@ export const MoviePage = () => {
                 <Label>This show is:<OtherInfo>{" "}{movie.thisShowIs}</OtherInfo></Label>
               </MovieData>
             </MovieInformation>
-          </Item>
+          </li>
         ))}
       </StyledPage>
-
-
     )
   else return;
 };

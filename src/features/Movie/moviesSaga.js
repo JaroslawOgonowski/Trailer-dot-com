@@ -11,12 +11,12 @@ function* fetchMoviesHandler() {
   catch (error) {
       yield put(fetchMoviesError());
       yield call(alert, "Błąd pobierania, spróbuj ponownie lub sprawdź połączenie z internetem")
-  }}
+  }};
 
 function* saveTasksInLocalStorageHandler() {
   const state = yield select(selectState);
   yield call(saveStateInLocalStorage, state);
-}
+};
 
 export function* moviesSaga() {
   yield takeEvery("*", saveTasksInLocalStorageHandler);

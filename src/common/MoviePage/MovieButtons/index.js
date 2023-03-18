@@ -9,7 +9,6 @@ export const MovieButtons = () => {
   const like = useSelector(selectLike);
   const dispatch = useDispatch();
 
-
   return (
 
     <StyledButtons>
@@ -17,8 +16,8 @@ export const MovieButtons = () => {
         {hideTrailer ? "Watch" : "Hide"} Trailer
       </Button>
       <Box>
-      <Button add><AddIcon /></Button>
-      <Button likeButton like={like} onClick={() => dispatch(toggleLike())}><LikeIcon /></Button>
+        <Button add><AddIcon /></Button>
+        <Button likeButton like={like} onClick={() => dispatch(toggleLike())}><LikeIcon /></Button>
       </Box>
     </StyledButtons>
   )
