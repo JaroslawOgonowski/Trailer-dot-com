@@ -22,7 +22,69 @@
     "secondBackground": "https://images.alphacoders.com/129/1294076.jpg",
     "secondPositionX": "35%",
     "thirdBackground": "https://images7.alphacoders.com/128/1289555.png",
-    "thirdPositionX": "40%"
+    "thirdPositionX": "40%",
+    "moreInfo": [
+      {
+        "actor": "Jenna Ortega",
+        "role": "Wednesday Addams",
+        "photo": "https://www.esslinger-zeitung.de/media.media.f14f125d-ca95-4609-b3ce-3e2a7031413a.original1024.jpg"
+      },
+      {
+        "actor": "Hunter Doohan",
+        "role": "Tyler Galpin",
+        "photo": "https://thumb.zigi.id/frontend/thumbnail/2022/12/08/zigi-63916fd351e5c-hunter-doohan_665_374.jpg"
+      },
+      {
+        "actor": "Percy Hynes White",
+        "role": "Xavier Thorpe",
+        "photo": "https://nowemedium.pl/wp-content/uploads/2023/01/image-10-edited.png"
+      },
+      {
+        "actor": "Emma Myers",
+        "role": "Enid Sinclair",
+        "photo": "https://preview.redd.it/fjty26zkbt4a1.png?width=960&crop=smart&auto=webp&v=enabled&s=000beb0f40e97f09065577da71882a756f0543a8"
+      },
+      {
+        "actor": "Joy Sunday",
+        "role": "Bianca Barclay",
+        "photo": "https://media.glamourmagazine.co.uk/photos/63a1e2bb695087e0746fc05b/3:4/w_1440,h_1920,c_limit/JOY%20SUNDAY%2020122022-sq.jpg"
+      },
+      {
+        "actor": "Georgie Farmer",
+        "role": "Ajax Petropolus",
+        "photo": "https://www.londoncomicconspring.com/wp-content/uploads/2022/12/GeorgieFarmerWeb.png"
+      },
+      {
+        "actor": "Christina Ricci",
+        "role": "Marilyn Thornhill",
+        "photo": "https://legendary-digital-network-assets.s3.amazonaws.com/wp-content/uploads/2022/11/17110318/Christina-Ricci-Wednesday-featured.jpg"
+      },
+      {
+        "actor": "Victor Dorobantu",
+        "role": "Thing",
+        "photo": "https://assets.popbuzz.com/2022/47/who-plays-thing-in-wednesday--victor-dorobantu-1669120199-view-0.jpg"
+      },
+      {
+        "actor": "Gwendoline Christie",
+        "role": "Principal Larissa Weems",
+        "photo": "https://i2.wp.com/deadline.com/wp-content/uploads/2022/12/Gwendoline-Christie-wednesday-the-addams-family.jpg"
+      },
+      {
+        "actor": "Riki Lindhome",
+        "role": "Dr. Valerie Kinbott",
+        "photo": "https://assets.popbuzz.com/2022/47/who-plays-dr-valerie-kinbott-in-wednesday--riki-lindhome-1669120200-view-0.png"
+      },
+      {
+        "actor": "Jamie McShane",
+        "role": "Sheriff Donovan Galpin",
+        "photo": "https://fwcdn.pl/fph/77/61/877761/1119515_1.8.jpg"
+      },
+      {
+        "actor": "Catherine Zeta-Jones",
+        "role": "Morticia Addams",
+        "photo": "https://i.iplsc.com/catherine-zeta-jones/000GLTRHBOJPU9MF-C122-F4.jpg"
+      }
+    ]
   },
   {
     "name": "spider-man",
@@ -43,10 +105,29 @@
     "tagAudio": true,
     "tagSubtitles": false,
     "firstBackground": "https://images8.alphacoders.com/430/430003.jpg",
-    "firstPositionX": "0%",
+    "firstPositionX": "18%",
     "secondBackground": "https://images.alphacoders.com/104/1042114.png",
     "secondPositionX": "25%",
-    "thirdBackground": "https://images6.alphacoders.com/490/490908.jpg",
-    "thirdPositionX": "50%"
+    "thirdBackground": "https://images2.alphacoders.com/102/102470.jpg",
+    "thirdPositionX": "35%",
+    "moreInfo": [
+      {
+        "id": "1",
+        "actor": "andżęj Ortega",
+        "role": "Wednesday Addams",
+        "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/Jenna_Ortega_2022_%28cropped%29.jpg/192px-Jenna_Ortega_2022_%28cropped%29.jpg"
+      },
+      {
+        "id": "2",
+        "actor": "Hunter Doohan",
+        "role": "Tyler Galpin",
+        "photo": "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcTRNL0o0ZaORWWJWy-_ktZZ42HujG_X9l2Zza_Uu1BrK4NQQxOG"
+      },
+      {
+        "actor": "Percy Hynes White",
+        "role": "Xavier Thorpe",
+        "photo": ""
+      }
+    ]
   }
 ]

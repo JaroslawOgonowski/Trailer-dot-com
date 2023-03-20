@@ -1,8 +1,8 @@
 import { useDispatch, useSelector } from "react-redux";
-import { fetchMovies, selectMenu, selectMovies, toggleMenu, toggleMovie } from "../../features/Movie/movieSlice";
+import { selectMenu, selectMovies, toggleMenu, toggleMovie } from "../../features/Movie/movieSlice";
 import { ReactComponent as NetflixLogo } from "./images/NetflixLogo.svg";
 import { Container, Item, Menu, Options, OptionsButton } from "./styled"
-import { useEffect } from "react";
+
 
 export const Header = () => {
 
@@ -10,9 +10,7 @@ export const Header = () => {
   const selectedMovie = useSelector(selectMovies);
   const hideMenu = useSelector(selectMenu);
 
-  useEffect(() => {
-    dispatch((fetchMovies()));
-  }, [dispatch]);
+
 
   return (
     <>
@@ -28,7 +26,10 @@ export const Header = () => {
         >
           Get movie ⁞⁞
           {selectedMovie.map(movie => (
-            <Item hide={hideMenu} key={movie.name} onClick={() => dispatch(toggleMovie(movie.id))}>
+            <Item hide={hideMenu} key={movie.name}
+              onClick={() =>
+                dispatch(toggleMovie(movie.id))
+              }>
               {movie.title}
             </Item>
           ))}

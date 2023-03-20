@@ -5,8 +5,15 @@ import { GlobalStyle } from "./GlobalStyle";
 import { Footer } from "../common/Footer";
 import { theme } from "./theme";
 import Background from "../common/Background";
+import { useDispatch } from "react-redux";
+import { useEffect } from "react";
+import { fetchMovies } from "../features/Movie/movieSlice";
 
 function App() {
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch((fetchMovies()));
+  }, [dispatch]);
 
   return (
     <ThemeProvider theme={theme}>

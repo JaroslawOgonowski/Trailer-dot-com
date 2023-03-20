@@ -11,7 +11,7 @@ const movieSlice = createSlice({
     add: false,
     status: null,
     hideMenu: true,
-    },
+  },
 
   reducers: {
     toggleHide: state => {
@@ -38,9 +38,10 @@ const movieSlice = createSlice({
       state.hideMenu = !state.hideMenu;
     },
     toggleMovie: (state, action) => {
-          const index = state.movies.findIndex(selectedMovie => selectedMovie.id === action.payload);      
-          state.title=state.movies[index].title;
-        },
+      const index = state.movies.findIndex(selectedMovie => selectedMovie.id === action.payload);
+      state.title = state.movies[index].title;
+      state.moreInfo = state.movies[index].moreInfo;
+    },
   },
 });
 
@@ -54,5 +55,5 @@ export const selectLoading = (state) => selectState(state).loading;
 export const selectMovies = (state) => selectState(state).movies;
 export const selectMenu = (state) => selectState(state).hideMenu;
 export const selectTitle = (state) => selectState(state).title;
-
+export const selectInfo = (state) => selectState(state).moreInfo;
 export default movieSlice.reducer;
