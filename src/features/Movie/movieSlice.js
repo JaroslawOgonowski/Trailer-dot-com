@@ -1,5 +1,4 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { getStateFromLocalStorage } from "./stateLocalStorage";
 
 const movieSlice = createSlice({
   name: "actualState",

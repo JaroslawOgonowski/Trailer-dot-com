@@ -10,6 +10,17 @@ export const StyledPage = styled.ul`
   };
 `;
 
+export const Marker = styled.div`
+  position: absolute;
+  top:200px;
+  
+  &&{
+    ${({ hideTrailer }) => hideTrailer && css`{
+      display: none;
+    }`};
+  };
+`;
+
 export const MovieBox = styled.div`
   display: flex;
   align-items: center;

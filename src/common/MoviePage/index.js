@@ -4,18 +4,13 @@ import { ReactComponent as Top10 } from "./images/Top10.svg";
 import { ReactComponent as Audio } from "./images/Audio.svg";
 import { ReactComponent as SubtitlesIcon } from "./images/SubtitlesIcon.svg";
 import {
-  Actor,
-  ActorName,
-  ActorPhoto,
-  ActorRole,
-  Actors,
   AgeGroup,
   AudioStream,
   Description,
   Episodes,
   HighestStandard,
   Label,
-  List,
+  Marker,
   MovieBox,
   MovieData,
   MovieInformation,
@@ -31,9 +26,8 @@ import {
   Year,
 } from "./styled";
 import { useSelector } from "react-redux";
-import { selectHide, selectInfo, selectMovies, selectTitle } from "../../features/Movie/movieSlice";
+import { selectHide, selectMovies, selectTitle } from "../../features/Movie/movieSlice";
 import { Carousel } from "./Carousel";
-
 
 export const MoviePage = () => {
   const hideTrailer = useSelector(selectHide);
@@ -44,15 +38,16 @@ export const MoviePage = () => {
   if (title != null)
     return (
       <StyledPage>
+        <Marker id="trailer" hideTrailer={hideTrailer} />
         {selectedMovie.map(movie => (
           <li key={movie.name}>
             <MovieBox >
-              <Title hideTrailer={hideTrailer}>{movie.title}</Title>
+              <Title >{movie.title}</Title>
               <Trailer
                 hideTrailer={hideTrailer}
                 width=""
+
                 height=""
-                id="video"
                 SameSite="none"
                 Secure
                 src={movie.iFrame}
@@ -89,8 +84,8 @@ export const MoviePage = () => {
                 <Label>This show is:<OtherInfo>{" "}{movie.thisShowIs}</OtherInfo></Label>
               </MovieData>
             </MovieInformation>
-            <Carousel/>
-            </li>
+            <Carousel />
+          </li>
         ))}
       </StyledPage>
     )

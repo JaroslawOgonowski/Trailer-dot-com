@@ -15,6 +15,12 @@ export const StyledButtons = styled.div`
     margin-bottom: 80px;
   }
 `;
+export const Box = styled.a`
+  background: none;
+  border: none;
+  width: fit-content;
+  text-decoration: none;
+`;
 
 export const Button = styled.button`
   width: 200px;

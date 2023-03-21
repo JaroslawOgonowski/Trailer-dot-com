@@ -4,14 +4,11 @@ import { selectMenu, selectMovies, toggleMenu, toggleMovie } from "../../feature
 import { ReactComponent as NetflixLogo } from "./images/NetflixLogo.svg";
 import { Container, Item, Menu, Options, OptionsButton } from "./styled"
 
-
 export const Header = () => {
 
   const dispatch = useDispatch();
   const selectedMovie = useSelector(selectMovies);
   const hideMenu = useSelector(selectMenu);
-
-
 
   return (
     <>

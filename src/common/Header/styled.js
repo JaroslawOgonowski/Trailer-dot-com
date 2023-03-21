@@ -6,13 +6,12 @@ export const Container = styled.div`
 
   @media(max-width: ${({ theme }) => theme.breakPoint.notebook}px) {
     margin: 48px 16px 0 16px;
-  
+  };
   @media(max-width: ${({ theme }) => theme.breakPoint.minimalVersion}px) {
     margin: 60px 16px 0 16px;
     width: 150px;    
   };
-  };
-  `;
+`;
 
 export const Options = styled.div`
   text-decoration: none;

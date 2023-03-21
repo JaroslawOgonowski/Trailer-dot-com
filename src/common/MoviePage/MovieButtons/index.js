@@ -1,20 +1,20 @@
 import React from "react";
-import { Button, Icon, StyledButtons } from "./styled";
+import { Box, Button, Icon, StyledButtons, UnvisibleButton } from "./styled";
 import { useDispatch, useSelector } from "react-redux";
-import { selectHide, selectLike, toggleHide, toggleLike } from "../../../features/Movie/movieSlice";
+import { selectHide, toggleHide } from "../../../features/Movie/movieSlice";
 
 export const MovieButtons = () => {
   const hideTrailer = useSelector(selectHide);
-  const like = useSelector(selectLike);
   const dispatch = useDispatch();
 
   return (
-
     <StyledButtons>
-      <Button watch onClick={() => dispatch(toggleHide())}>
-        {hideTrailer ? "Watch" : "Hide"} Trailer
-      </Button>
-      <Button><Icon>i</Icon>More</Button>      
+      <Box href="#trailer">
+        <Button watch onClick={() => dispatch(toggleHide())}>
+          {hideTrailer ? "Watch" : "Hide"} Trailer
+        </Button>
+      </Box>
+      <Button><Icon>i</Icon>More</Button>
     </StyledButtons>
   )
 };
