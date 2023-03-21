@@ -1,3 +1,4 @@
+import React from "react";
 import MovieButtons from "./MovieButtons";
 import { ReactComponent as Top10 } from "./images/Top10.svg";
 import { ReactComponent as Audio } from "./images/Audio.svg";
@@ -31,13 +32,15 @@ import {
 } from "./styled";
 import { useSelector } from "react-redux";
 import { selectHide, selectInfo, selectMovies, selectTitle } from "../../features/Movie/movieSlice";
+import { Carousel } from "./Carousel";
+
 
 export const MoviePage = () => {
   const hideTrailer = useSelector(selectHide);
   const movie = useSelector(selectMovies);
   const title = useSelector(selectTitle);
   const selectedMovie = movie.filter(element => element.title === title);
-  const info = useSelector(selectInfo);
+
   if (title != null)
     return (
       <StyledPage>
@@ -86,18 +89,8 @@ export const MoviePage = () => {
                 <Label>This show is:<OtherInfo>{" "}{movie.thisShowIs}</OtherInfo></Label>
               </MovieData>
             </MovieInformation>
-            <List>
-              <Actors>
-                {info.map(info => (
-                  <Actor key={info.actor} >
-                    <ActorPhoto alt="" src={info.photo}></ActorPhoto>
-                    <ActorName>{info.actor}</ActorName>
-                    <ActorRole>{info.role}</ActorRole>
-                  </Actor>
-                ))}
-              </Actors>
-            </List>
-          </li>
+            <Carousel/>
+            </li>
         ))}
       </StyledPage>
     )

@@ -1,3 +1,4 @@
+import React from "react";
 import { Button, Icon, StyledButtons } from "./styled";
 import { useDispatch, useSelector } from "react-redux";
 import { selectHide, selectLike, toggleHide, toggleLike } from "../../../features/Movie/movieSlice";

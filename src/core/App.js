@@ -8,6 +8,7 @@ import Background from "../common/Background";
 import { useDispatch } from "react-redux";
 import { useEffect } from "react";
 import { fetchMovies } from "../features/Movie/movieSlice";
+import React from "react";
 
 function App() {
   const dispatch = useDispatch();

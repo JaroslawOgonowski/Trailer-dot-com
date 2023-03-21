@@ -1,3 +1,4 @@
+import React from "react";
 import { useSelector } from "react-redux";
 import { selectMovies, selectTitle } from "../../features/Movie/movieSlice";
 import { ClasicBackground, StyledBackground } from "./styled";
