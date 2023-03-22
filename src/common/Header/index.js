@@ -1,8 +1,7 @@
-import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { selectMenu, selectMovies, toggleMenu, toggleMovie } from "../../features/Movie/movieSlice";
-import { ReactComponent as NetflixLogo } from "./images/NetflixLogo.svg";
-import { Container, Item, Menu, Options, OptionsButton } from "./styled"
+import { Item, Logo, Menu, Options, OptionsButton } from "./styled"
+import TrailersLogo from "./images/Logo.png"
 
 export const Header = () => {
 
@@ -12,9 +11,7 @@ export const Header = () => {
 
   return (
     <>
-      <Container>
-        <NetflixLogo alt="" />
-      </Container>
+      <a href="https://jaroslawogonowski.github.io/Netflix-style-movie-page-on-react/" ><Logo src={TrailersLogo} alt="" /></a>
       <Options>
         <OptionsButton target="_blank" href="https://www.netflix.com/pl/">
           Home

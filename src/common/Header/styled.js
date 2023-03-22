@@ -1,16 +1,29 @@
 import styled, { css } from "styled-components";
 
-export const Container = styled.div`
+export const Logo = styled.img`
+  width: 300px;
+  opacity: 0.6;
+  transition: 1s;
   margin: 54px 100px 0 100px;
   width: 300px;
 
   @media(max-width: ${({ theme }) => theme.breakPoint.notebook}px) {
     margin: 48px 16px 0 16px;
   };
+  
   @media(max-width: ${({ theme }) => theme.breakPoint.minimalVersion}px) {
     margin: 60px 16px 0 16px;
-    width: 150px;    
+    width: 150px;  
+  };  
+
+  &:hover{
+    opacity: 1;
+    cursor: pointer;
   };
+  
+  &:active{
+   transform: scale(1.5);
+  }
 `;
 
 export const Options = styled.div`
@@ -52,6 +65,7 @@ export const OptionsButton = styled.a`
   &:hover{
     transform: scale(1.2);
     color: ${({ theme }) => theme.color.mainText};
+  
   };
 `;
 

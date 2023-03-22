@@ -45,6 +45,29 @@ export const ActorRole = styled.div`
   text-align: center;
 `;
 
+export const ActorFacts = styled.div`
+text-align: center;
+position: absolute;
+bottom: 0;
+left: 0;
+width: 230px;
+padding: 20px;
+height: auto;
+align-self: auto;
+background-color: #070303c1;
+border-radius: 4px;
+color: white;
+margin-top: 30px;
+display: none;
+
+${Actor}:hover &{
+display: flex;
+justify-content: center;
+position: relative;
+bottom:0;
+};
+`;
+
 export const CarouselButton = styled.button`
   cursor: pointer;
   position: absolute;
@@ -76,5 +99,5 @@ export const CarouselButton = styled.button`
 
 export const Box = styled.div`
   width: 150px;
-  height: 250px;
+  height: 600px;
 `;

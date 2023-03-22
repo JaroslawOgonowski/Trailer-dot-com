@@ -29,7 +29,8 @@ import {
 } from "./styled";
 import { useSelector } from "react-redux";
 import { selectHide, selectHideInfo, selectMovies, selectTitle } from "../../features/Movie/movieSlice";
-import { Carousel } from "./Carousel";
+import { Carousel } from "./MovieButtons/Carousel";
+
 
 export const MoviePage = () => {
   const hideTrailer = useSelector(selectHide);

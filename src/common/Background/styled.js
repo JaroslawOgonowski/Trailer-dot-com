@@ -6,6 +6,7 @@ export const StyledBackground = styled.li`
   top:0;
   right: 0;
   left: 0;
+  min-height: 100%;
   background-repeat: no-repeat;
   background-size: cover;  
   animation-name: ${(props) => props.name};
@@ -26,6 +27,7 @@ export const StyledBackground = styled.li`
 
 export const ClasicBackground= styled.div`
   position: absolute;
+  min-height: 100%;
   top:0;
   right: 0;
   left: 0;

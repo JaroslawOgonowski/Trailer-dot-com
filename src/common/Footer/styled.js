@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const FooterContent = styled.div`
-  margin-top: 500px;
+  margin-top: 300px;
   color: ${({ theme }) => theme.color.secondaryText};
   text-align: center;
   font-size: 14px;
