@@ -52,16 +52,10 @@ export const MoviePage = () => {
                 width=""
                 height=""
                 SameSite="none"
+                allow="fullscreen;"
                 Secure
                 src={movie.iFrame}
-                title="YouTube video player"
-                allow="accelerometer;
-            autoplay; 
-            clipboard-write; 
-            encrypted-media; 
-            gyroscope; 
-            picture-in-picture; 
-            web-share"
+                title="YouTube video player"           
               />
             </MovieBox>
             <MovieButtons />

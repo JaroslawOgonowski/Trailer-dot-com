@@ -11,10 +11,10 @@ export const Header = () => {
 
   return (
     <>
-      <a href="https://jaroslawogonowski.github.io/Netflix-style-movie-page-on-react/" ><Logo src={TrailersLogo} alt="" /></a>
+      <a href="https://jaroslawogonowski.github.io/Trailer-dot-com/"><Logo src={TrailersLogo} alt="" /></a>
       <Options>
         <OptionsButton target="_blank" href="https://www.netflix.com/pl/">
-          Home
+          TOP Movie
         </OptionsButton>
         <Menu
           onClick={() => dispatch(toggleMenu())}
