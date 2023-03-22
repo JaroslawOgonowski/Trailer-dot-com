@@ -2,7 +2,7 @@ import styled, { css } from "styled-components";
 
 export const Wrapper = styled.div`
   margin-top:80px;
-  width: 90%;display:none;
+  width: 90%;
   
   @media(max-width: ${({ theme }) => theme.breakPoint.notebook}px) {
     width:100%;  

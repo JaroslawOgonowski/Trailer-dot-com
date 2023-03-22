@@ -199,3 +199,16 @@ export const OtherInfo = styled.span`
   color: white;
   margin-bottom: 14px;
 `;
+
+export const Box = styled.div`
+ &&{
+    ${({ hideInfo }) => hideInfo && css`{
+      display: none;
+    }`};
+  };
+`;
+
+export const InfoMarker = styled.div`
+position: relative;
+top:-80px
+`;

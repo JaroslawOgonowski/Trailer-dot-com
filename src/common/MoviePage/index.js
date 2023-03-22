@@ -6,9 +6,11 @@ import { ReactComponent as SubtitlesIcon } from "./images/SubtitlesIcon.svg";
 import {
   AgeGroup,
   AudioStream,
+  Box,
   Description,
   Episodes,
   HighestStandard,
+  InfoMarker,
   Label,
   Marker,
   MovieBox,
@@ -26,11 +28,12 @@ import {
   Year,
 } from "./styled";
 import { useSelector } from "react-redux";
-import { selectHide, selectMovies, selectTitle } from "../../features/Movie/movieSlice";
+import { selectHide, selectHideInfo, selectMovies, selectTitle } from "../../features/Movie/movieSlice";
 import { Carousel } from "./Carousel";
 
 export const MoviePage = () => {
   const hideTrailer = useSelector(selectHide);
+  const hideInfo = useSelector(selectHideInfo)
   const movie = useSelector(selectMovies);
   const title = useSelector(selectTitle);
   const selectedMovie = movie.filter(element => element.title === title);
@@ -46,7 +49,6 @@ export const MoviePage = () => {
               <Trailer
                 hideTrailer={hideTrailer}
                 width=""
-
                 height=""
                 SameSite="none"
                 Secure
@@ -84,7 +86,10 @@ export const MoviePage = () => {
                 <Label>This show is:<OtherInfo>{" "}{movie.thisShowIs}</OtherInfo></Label>
               </MovieData>
             </MovieInformation>
+            <Box hideInfo={hideInfo}>
+            <InfoMarker id="infoMarker" hideInfo={hideInfo}/>
             <Carousel />
+            </Box>
           </li>
         ))}
       </StyledPage>

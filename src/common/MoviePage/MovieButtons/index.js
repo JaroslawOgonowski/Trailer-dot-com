@@ -1,7 +1,7 @@
 import React from "react";
-import { Box, Button, Icon, StyledButtons, UnvisibleButton } from "./styled";
+import { Box, Button, Icon, StyledButtons } from "./styled";
 import { useDispatch, useSelector } from "react-redux";
-import { selectHide, toggleHide } from "../../../features/Movie/movieSlice";
+import { selectHide, toggleHide, toggleInfo } from "../../../features/Movie/movieSlice";
 
 export const MovieButtons = () => {
   const hideTrailer = useSelector(selectHide);
@@ -14,7 +14,12 @@ export const MovieButtons = () => {
           {hideTrailer ? "Watch" : "Hide"} Trailer
         </Button>
       </Box>
-      <Button><Icon>i</Icon>More</Button>
+      <Box href="#infoMarker">
+      <Button onClick={() => dispatch(toggleInfo())}>
+        <Icon>i</Icon>More
+      </Button>
+      </Box>
+      
     </StyledButtons>
   )
 };

@@ -6,21 +6,17 @@ const movieSlice = createSlice({
     loading: false,
     movies: [],
     hideTrailer: true,
-    like: false,
-    add: false,
     status: null,
     hideMenu: true,
+    hideInfo: true
   },
 
   reducers: {
     toggleHide: state => {
       state.hideTrailer = !state.hideTrailer;
     },
-    toggleLike: state => {
-      state.like = !state.like
-    },
-    toggleAdd: state => {
-      state.add = !state.add
+    toggleInfo: state => {
+      state.hideInfo = !state.hideInfo
     },
     fetchMovies: (state) => {
       state.loading = true;
@@ -44,7 +40,7 @@ const movieSlice = createSlice({
   },
 });
 
-export const { toggleHide, toggleMovie, toggleMenu, toggleLike, toggleAdd, fetchMovies, fetchMoviesSuccess, fetchMoviesError } = movieSlice.actions;
+export const { toggleHide, toggleMovie, toggleMenu, toggleInfo, fetchMovies, fetchMoviesSuccess, fetchMoviesError } = movieSlice.actions;
 
 export const selectState = state => state.movie;
 export const selectHide = state => selectState(state).hideTrailer;
@@ -55,4 +51,5 @@ export const selectMovies = (state) => selectState(state).movies;
 export const selectMenu = (state) => selectState(state).hideMenu;
 export const selectTitle = (state) => selectState(state).title;
 export const selectInfo = (state) => selectState(state).moreInfo;
+export const selectHideInfo = (state) => selectState(state).hideInfo;
 export default movieSlice.reducer;
