@@ -21,7 +21,7 @@ function App() {
       <>
         <GlobalStyle />
         <Background>
-          <Header />
+          <Header />          
           <MoviePage />
           <Footer />
         </Background>

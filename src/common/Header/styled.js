@@ -49,7 +49,9 @@ export const Options = styled.div`
   };
 `;
 
-export const OptionsButton = styled.a`
+export const SearchMovie = styled.input`
+  text-align: center;
+  align-self: flex-start;
   color: ${({ theme }) => theme.color.menuText};
   text-decoration:none;
   background: none;
