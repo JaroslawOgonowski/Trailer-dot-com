@@ -202,6 +202,7 @@ export const OtherInfo = styled.span`
 `;
 
 export const Box = styled.div`
+margin-bottom: 50px;
  &&{
     ${({ hideInfo }) => hideInfo && css`{
       display: none;
@@ -230,5 +231,7 @@ align-items: center;
 `
 export const StreamingLogo = styled.img`
 margin-left: 16px;
-
+@media(max-width: ${({ theme }) => theme.breakPoint.mobileMax}px) {
+  width: 100px;
+  };
 `;

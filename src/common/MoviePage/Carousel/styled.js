@@ -2,10 +2,13 @@ import styled, { css } from "styled-components";
 
 export const Wrapper = styled.div`
   margin-top:80px;
-  width: 90%;
+  width: 100%;
   
   @media(max-width: ${({ theme }) => theme.breakPoint.notebook}px) {
-    width:100%;  
+    width:100%;
+    @media(max-width: ${({ theme }) => theme.breakPoint.mobileMax}px) {
+  height: fit-content;
+  };  
   };
 `;
 
@@ -16,7 +19,6 @@ export const Actor = styled.div`
   align-items: center;
   transition: 1s;
   cursor: pointer;
-  
   &:hover{
     transform: scale(1.05);
     color:${({ theme }) => theme.color.mainText}
@@ -51,7 +53,7 @@ position: absolute;
 bottom: 0;
 left: 0;
 width: 230px;
-padding: 20px;
+padding: 16px;
 height: auto;
 align-self: auto;
 background-color: #070303c1;
@@ -65,6 +67,10 @@ display: flex;
 justify-content: center;
 position: relative;
 bottom:0;
+@media(max-width: ${({ theme }) => theme.breakPoint.mobileMax}px) {
+  padding: 8px;
+  width: 125%
+  };
 };
 `;
 
@@ -98,6 +104,11 @@ export const CarouselButton = styled.button`
 `;
 
 export const Box = styled.div`
+margin-top: 25px;
   width: 150px;
   height: 600px;
+  @media(max-width: ${({ theme }) => theme.breakPoint.mobileMax}px) {
+height: 700px;
+  };
+  
 `;

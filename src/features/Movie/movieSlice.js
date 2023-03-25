@@ -36,6 +36,7 @@ const movieSlice = createSlice({
       const index = state.movies.findIndex(selectedMovie => selectedMovie.id === action.payload);
       state.title = state.movies[index].title;
       state.moreInfo = state.movies[index].moreInfo;
+      state.hideMenu = !state.hideMenu;
     },
   },
 });

@@ -6,11 +6,10 @@ export const theme = {
     minimalVersion: 550
   },
   color: {
+    menuBackground: "rgba(7, 7, 7, 0.833)",
     buttonBackground: "rgba(42, 42, 42, 0.26)",
     buttonBorder: "rgba(255, 255, 255, 0.242)",
     buttonBorderHover: "rgba(255, 255, 255, 0.8)",
-    clear: "#00000000",
-    star: "#fbdd18e4",
     mainText: "#fffffff1",
     secondaryText: "rgba(153, 153, 153, 1)",
     black: "#000000",

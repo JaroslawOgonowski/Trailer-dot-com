@@ -1,6 +1,6 @@
 import { useDispatch, useSelector } from "react-redux";
 import { selectMenu, selectMovies, toggleMenu, toggleMovie } from "../../features/Movie/movieSlice";
-import { Item, Logo, Menu, Options } from "./styled"
+import { Box, Item, ListOfMoviesComponent, Logo, Menu, MenuContainer, MenuTitle, NoSearchResultMsg, SearchMovieInput } from "./styled"
 import TrailersLogo from "./images/Logo.png"
 import { useState } from "react";
 
@@ -13,19 +13,19 @@ export const Header = () => {
   function MoviesList({ movies }) {
     if (movies.length > 0) {
       return (
-        <ul>
+        <ListOfMoviesComponent>
           {movies.map(movie => (
             <Item key={movie.description}
-              onClick={() =>
-                dispatch(toggleMovie(movie.id))
+              onClick={
+                () => dispatch(toggleMovie(movie.id))
               }>
               {movie.title}
             </Item>
           ))}
-        </ul>
+        </ListOfMoviesComponent>
       );
     }
-    return <p>Nie mamy filmu, którego szukasz</p>;
+    return <NoSearchResultMsg>We couldn't find <br/>this video</NoSearchResultMsg>;
   }
 
   function getFilteredMoviesForText(text) {
@@ -44,17 +44,15 @@ export const Header = () => {
   return (
     <>
       <a href="https://jaroslawogonowski.github.io/Trailer-dot-com/"><Logo src={TrailersLogo} alt="" /></a>
-      <Options>
-        <Menu
-          onClick={() => dispatch(toggleMenu())}
-        >
-          Get movie ⁞⁞
-          <div className="wyszukiwarka">
-            <input onInput={filterMovies} />
-            <MoviesList movies={filteredMovies || movies} />
-          </div>
+      <MenuContainer>
+        <Menu>
+          <MenuTitle onClick={() => dispatch(toggleMenu())}>Get movie ⁞⁞</MenuTitle>
+          <Box hideMenu={hideMenu}>
+            <SearchMovieInput placeholder="Search 🎬" onInput={filterMovies} />
+            <MoviesList movies={filteredMovies || movies}  />
+          </Box>
         </Menu>
-      </Options>
+      </MenuContainer>
     </>
   );
 };
