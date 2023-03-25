@@ -1,8 +1,8 @@
 {
-  "name": "netflix-movie-page",
+  "name": "trailer-dot-com",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://jaroslawogonowski.github.io/Netflix-style-movie-page-on-react/",
+  "homepage": "https://jaroslawogonowski.github.io/Trailer-dot-com/",
   "dependencies": {
     "@reduxjs/toolkit": "^1.9.3",
     "@testing-library/jest-dom": "^5.16.5",

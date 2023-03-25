@@ -1,6 +1,6 @@
 export const getMovie = async () => {
 
-  const response = await fetch("/Netflix-style-movie-page-on-react/movies.json");
+  const response = await fetch("/Trailer-dot-com/movies.json");
 
   if (!response.ok) {
     new Error(response.statusText);
