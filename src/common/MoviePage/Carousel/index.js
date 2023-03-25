@@ -11,7 +11,7 @@ export const Carousel = () => {
     <>
     <Box>
       <Actor className="actor" key={info.actor} >
-       <ActorPhoto alt="" src={info.photo}></ActorPhoto>
+        <ActorPhoto alt="" src={info.photo}></ActorPhoto>
         <ActorName>{info.actor}</ActorName>
         <ActorRole>{info.role}</ActorRole>
         <ActorFacts>{info.facts}</ActorFacts>

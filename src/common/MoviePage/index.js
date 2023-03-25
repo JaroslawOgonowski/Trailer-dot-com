@@ -6,6 +6,7 @@ import { ReactComponent as SubtitlesIcon } from "./images/SubtitlesIcon.svg";
 import {
   AgeGroup,
   AudioStream,
+  Avaible,
   Box,
   Description,
   Episodes,
@@ -18,6 +19,7 @@ import {
   MovieInformation,
   OtherInfo,
   Specification,
+  StreamingLogo,
   StyledPage,
   Subtitle,
   Subtitles,
@@ -29,7 +31,8 @@ import {
 } from "./styled";
 import { useSelector } from "react-redux";
 import { selectHide, selectHideInfo, selectMovies, selectTitle } from "../../features/Movie/movieSlice";
-import { Carousel } from "./MovieButtons/Carousel";
+import { Carousel } from "./Carousel";
+
 
 
 export const MoviePage = () => {
@@ -55,7 +58,7 @@ export const MoviePage = () => {
                 allow="fullscreen;"
                 Secure
                 src={movie.iFrame}
-                title="YouTube video player"           
+                title="YouTube video player"
               />
             </MovieBox>
             <MovieButtons />
@@ -82,8 +85,11 @@ export const MoviePage = () => {
               </MovieData>
             </MovieInformation>
             <Box hideInfo={hideInfo}>
-            <InfoMarker id="infoMarker" hideInfo={hideInfo}/>
-            <Carousel />
+              <InfoMarker id="infoMarker" hideInfo={hideInfo} />
+              <Carousel />
+              <Avaible>
+                Available on:<StreamingLogo width="180px" src={movie.avaible}/>
+                </Avaible>
             </Box>
           </li>
         ))}

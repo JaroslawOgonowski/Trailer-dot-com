@@ -2,7 +2,7 @@ import styled, { css } from "styled-components";
 
 export const StyledPage = styled.ul`
   list-style: none;
-  margin: 146px 100px 0 100px;
+  margin: 146px 100px 200px 100px;
   
   @media(max-width: ${({ theme }) => theme.breakPoint.notebook}px) {
     margin: 48px 16px 0 16px;
@@ -84,6 +84,7 @@ export const MovieInformation = styled.div`
   display: flex;
   gap: 45px;
   padding: 8px;
+  margin-bottom: 60px;
   
   @media(max-width: ${({ theme }) => theme.breakPoint.mobileMax}px) {
     flex-direction: column;
@@ -210,5 +211,24 @@ export const Box = styled.div`
 
 export const InfoMarker = styled.div`
 position: relative;
-top:-80px
+top:-80px;
+`;
+
+export const Avaible = styled.div`
+font-size: 22px;
+position: relative;
+bottom: 50px;
+left:0px;
+color: white;
+display: flex;
+justify-content: center;
+align-items: center;
+
+  @media(max-width: ${({ theme }) => theme.breakPoint.mobileMax}px) {
+  flex-wrap : wrap;
+  };
+`
+export const StreamingLogo = styled.img`
+margin-left: 16px;
+
 `;
