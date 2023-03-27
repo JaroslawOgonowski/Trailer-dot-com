@@ -1,5 +1,19 @@
 import styled, { css } from "styled-components";
 
+export const HeaderContainer = styled.div`
+  text-decoration: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 40px;
+  margin-right: 30px;
+
+  @media(max-width: ${({ theme }) => theme.breakPoint.mobileMax}px) {
+    flex-direction: column-reverse;
+    margin: 0;
+  };
+`;
+
 export const Logo = styled.img`
   width: 300px;
   opacity: 0.6;
@@ -13,7 +27,7 @@ export const Logo = styled.img`
   
   @media(max-width: ${({ theme }) => theme.breakPoint.minimalVersion}px) {
     margin: 60px 16px 0 16px;
-    width: 150px;  
+    width: 250px;  
   };  
 
   &:hover{
@@ -23,21 +37,6 @@ export const Logo = styled.img`
   
   &:active{
    transform: scale(1.5);
-  }
-`;
-
-export const MenuContainer = styled.div`
-  text-decoration: none;
-  position: fixed;
-  top:30px;
-  right: 40px;
-  display: flex;
-  gap: 30px;
-
-  @media(max-width: ${({ theme }) => theme.breakPoint.mobileMax}px) {
-    gap: 20px;
-    top:8px;
-    right: 8px;
   };
 `;
 
@@ -54,32 +53,50 @@ export const Menu = styled.div`
   font-weight: 500;
   font-size: 20px;
   transition: 0.5s;
-
+  
   &:hover{
     color: ${({ theme }) => theme.color.mainText}; 
     transform: scale(1.08)
-    };
+  };
+  
+  @media(max-width: ${({ theme }) => theme.breakPoint.mobileMax}px) {
+    width: 100%;
+    &:hover{
+    
+    transform: scale(1)
+  };
+};
 `;
 
-export const MenuTitle = styled.h2`
-display: flex;
-justify-content: center;
-align-items: center;
-font-size: 22px;
-margin: 0;
-width: 100%;
-height: 50px;
-border-radius: 5px;
- @media(max-width: ${({ theme }) => theme.breakPoint.mobileMax}px) {
-    background-color: ${({ theme }) => theme.color.menuBackground};
-     };
+export const MenuFrame = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 22px;
+  margin: 0;
+  width: 100%;
+  height: 50px;
+  border-radius: 5px;
+  
+  @media(max-width: ${({ theme }) => theme.breakPoint.mobileMax}px) {
+    background-color: ${({ theme }) => theme.color.menuBackground};  
+    padding: 20px 0;
+    justify-content: flex-end;
+  };
+`;
+
+export const MenuElement = styled.div`
+  @media(max-width: ${({ theme }) => theme.breakPoint.mobileMax}px) {
+    margin-right: 50px;
+  };
 `;
 
 export const Box = styled.div`
-margin: 0;
-&&{
+  align-self: flex-end;
+  margin: 0;
+  &&{
     ${({ hideMenu }) => hideMenu && css`{
-  visibility: hidden;
+      visibility: hidden;
     }`};
   };
 `;
@@ -106,16 +123,18 @@ export const SearchMovieInput = styled.input`
   &:hover{
     color: ${({ theme }) => theme.color.mainText};
     };
+  
   @media(max-width: ${({ theme }) => theme.breakPoint.mobileMax}px) {
-    background-color: ${({ theme }) => theme.color.menuBackground}
+    background-color: ${({ theme }) => theme.color.menuBackground};
+    margin-right: 20px;
   };
 `;
 
 export const ListOfMoviesComponent = styled.ul`
-margin: 0;
-text-align: center;
-list-style: none;
-padding: 0;
+  margin: 0;
+  text-align: center;
+  list-style: none;
+  padding: 0;
 `;
 
 export const Item = styled.li`
@@ -140,30 +159,26 @@ export const Item = styled.li`
         opacity: 1;
         transform: rotateX(0deg);
     };
-};
+  };
   
   &:hover{
     color: ${({ theme }) => theme.color.hoverRed};
   };
 
-  &&{
-    ${({ hide }) => hide && css`{
-  
-    }`};
-  };
-
   @media(max-width: ${({ theme }) => theme.breakPoint.mobileMax}px) {
     background-color: ${({ theme }) => theme.color.menuBackground};
     border: 1px solid gray;
+    margin-right: 20px;
   };
 `;
 
 export const NoSearchResultMsg = styled.div`
-display: flex;
-justify-content: center;
-align-items: center;
-text-align: center;
-@media(max-width: ${({ theme }) => theme.breakPoint.mobileMax}px) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  
+  @media(max-width: ${({ theme }) => theme.breakPoint.mobileMax}px) {
     background-color: ${({ theme }) => theme.color.menuBackground};
-};
+  };
 `;

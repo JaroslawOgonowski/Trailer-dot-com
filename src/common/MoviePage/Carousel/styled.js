@@ -39,44 +39,14 @@ export const ActorPhoto = styled.img`
   };
 `;
 
-export const ActorName = styled.div`
-  text-align: center;
-`;
-
 export const ActorRole = styled.div`
   text-align: center;
-`;
-
-export const ActorFacts = styled.div`
-text-align: center;
-position: absolute;
-bottom: 0;
-left: 0;
-width: 230px;
-padding: 16px;
-height: auto;
-align-self: auto;
-background-color: #070303c1;
-border-radius: 4px;
-color: white;
-margin-top: 30px;
-display: none;
-
-${Actor}:hover &{
-display: flex;
-justify-content: center;
-position: relative;
-bottom:0;
-@media(max-width: ${({ theme }) => theme.breakPoint.mobileMax}px) {
-  padding: 8px;
-  width: 125%
-  };
-};
+  height: 25px;
 `;
 
 export const CarouselButton = styled.button`
   cursor: pointer;
-  position: absolute;
+  position: fixed;
   background-color: #000000ad;
   border: none;
   top:0;
@@ -106,9 +76,35 @@ export const CarouselButton = styled.button`
 export const Box = styled.div`
 margin-top: 25px;
   width: 150px;
-  height: 600px;
+  //height: 600px;
   @media(max-width: ${({ theme }) => theme.breakPoint.mobileMax}px) {
-height: 700px;
-  };
-  
+//height: 700px;
+  };  
 `;
+
+export const ActorDetail = styled.div`
+background-color:${({ theme }) => theme.color.menuBackground};
+color:${({ theme }) => theme.color.mainText};
+width: 100%;
+height: 500px;
+margin: 50px 0;
+justify-content: center;
+align-self: center;
+position: relative;
+bottom: 20px;
+border-radius:5px;
+@media(max-width: ${({ theme }) => theme.breakPoint.mobileMax}px) {
+  bottom: 20px;
+}
+`;
+
+export const DetailPhoto = styled.img` 
+width: 30%;
+height: 100%;
+`
+
+export const DetailName = styled.div``
+
+export const DetailRole = styled.div``
+
+export const DetailFacts = styled.div``

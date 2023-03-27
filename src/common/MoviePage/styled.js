@@ -218,10 +218,11 @@ top:-80px;
 export const Avaible = styled.div`
 font-size: 22px;
 position: relative;
-bottom: 50px;
+bottom: 10px;
 left:0px;
 color: white;
 display: flex;
+flex-direction: column;
 justify-content: center;
 align-items: center;
 
@@ -230,7 +231,7 @@ align-items: center;
   };
 `
 export const StreamingLogo = styled.img`
-margin-left: 16px;
+margin-top: 16px;
 @media(max-width: ${({ theme }) => theme.breakPoint.mobileMax}px) {
   width: 100px;
   };
