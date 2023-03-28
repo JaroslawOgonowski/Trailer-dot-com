@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/Trailer-dot-com/static/css/main.f32e9301.css",
-    "main.js": "/Trailer-dot-com/static/js/main.e6b843c2.js",
+    "main.js": "/Trailer-dot-com/static/js/main.6af61fcb.js",
     "static/js/787.852a58e9.chunk.js": "/Trailer-dot-com/static/js/787.852a58e9.chunk.js",
     "static/media/Top10.svg": "/Trailer-dot-com/static/media/Top10.02d506a1488053d6f0c3bcbe394b619f.svg",
     "static/media/Audio.svg": "/Trailer-dot-com/static/media/Audio.e87f2854d759a8654b9689cf904ebbaa.svg",
@@ -9,11 +9,11 @@
     "index.html": "/Trailer-dot-com/index.html",
     "static/media/SubtitlesIcon.svg": "/Trailer-dot-com/static/media/SubtitlesIcon.7ca023ef2f558604c328fc54e32a2caa.svg",
     "main.f32e9301.css.map": "/Trailer-dot-com/static/css/main.f32e9301.css.map",
-    "main.e6b843c2.js.map": "/Trailer-dot-com/static/js/main.e6b843c2.js.map",
+    "main.6af61fcb.js.map": "/Trailer-dot-com/static/js/main.6af61fcb.js.map",
     "787.852a58e9.chunk.js.map": "/Trailer-dot-com/static/js/787.852a58e9.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.f32e9301.css",
-    "static/js/main.e6b843c2.js"
+    "static/js/main.6af61fcb.js"
   ]
 }
