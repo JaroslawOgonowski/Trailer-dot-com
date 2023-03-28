@@ -37,8 +37,9 @@ const movieSlice = createSlice({
       const index = state.movies.findIndex(selectedMovie => selectedMovie.id === action.payload);
       state.title = state.movies[index].title;
       state.moreInfo = state.movies[index].moreInfo;
-      state.hideMenu = !state.hideMenu;
-      state.actor=[];
+      state.hideInfo = false;
+      state.hideMenu = true;
+      state.actor = [];
     },
     toggleActor: (state, action) => {
       const index = state.moreInfo.findIndex(selectedActor => selectedActor.actor === action.payload);

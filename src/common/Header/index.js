@@ -9,7 +9,6 @@ export const Header = () => {
   const movies = useSelector(selectMovies);
   const hideMenu = useSelector(selectMenu);
 
-
   function MoviesList({ movies }) {
     if (movies.length > 0) {
       return (
@@ -47,7 +46,7 @@ export const Header = () => {
         <Logo src={TrailersLogo} alt="" />
       </a>
       <Menu>
-        <MenuFrame onClick={() => dispatch(toggleMenu())}>
+        <MenuFrame onMouseEnter={() => dispatch(toggleMenu())}>
           <MenuElement>Get movie ⁞⁞</MenuElement>
         </MenuFrame>
         <Box hideMenu={hideMenu}>

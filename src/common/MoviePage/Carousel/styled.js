@@ -26,8 +26,6 @@ export const Actor = styled.div`
 `;
 
 export const ActorPhoto = styled.img`
-  width: 150px;
-  height: 180px;
   border-radius: 5px;
   object-fit: cover;
   padding: 2px;
@@ -41,12 +39,12 @@ export const ActorPhoto = styled.img`
 
 export const ActorRole = styled.div`
   text-align: center;
-  height: 25px;
+  height: 42px;
 `;
 
 export const CarouselButton = styled.button`
   cursor: pointer;
-  position: fixed;
+  position: absolute;
   background-color: #000000ad;
   border: none;
   top:0;
@@ -74,37 +72,73 @@ export const CarouselButton = styled.button`
 `;
 
 export const Box = styled.div`
-margin-top: 25px;
-  width: 150px;
-  //height: 600px;
-  @media(max-width: ${({ theme }) => theme.breakPoint.mobileMax}px) {
-//height: 700px;
-  };  
+  margin-top: 25px;
+  width: 150px; 
 `;
 
 export const ActorDetail = styled.div`
 background-color:${({ theme }) => theme.color.menuBackground};
 color:${({ theme }) => theme.color.mainText};
 width: 100%;
-height: 500px;
+height: 70vh;
 margin: 50px 0;
 justify-content: center;
 align-self: center;
 position: relative;
 bottom: 20px;
 border-radius:5px;
+display: grid;
+grid-template-columns: 2fr 1fr;
+gap: 10px;
+transition: 0.8s;
 @media(max-width: ${({ theme }) => theme.breakPoint.mobileMax}px) {
   bottom: 20px;
+  display:flex;
+  flex-direction: column;
+  height: auto;
 }
 `;
 
 export const DetailPhoto = styled.img` 
-width: 30%;
-height: 100%;
-`
+  width:100%;
+  transition: 1s;
+  height: 70vh;
+  scale:0.95;
+  object-fit: cover;
+  border-radius: 5px;
+  object-position: 50% 20%;
+`;
 
-export const DetailName = styled.div``
+export const DetailTextBox = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 3vh;
+  align-items: center;
+  justify-content: flex-start;
+  margin: 0 3vh 3vh;
+`;
 
-export const DetailRole = styled.div``
+export const DetailName = styled.h2`
+  text-align: center;
+  font-size: 36px;
+  margin-top: 50px;
+  
+  @media(max-width: ${({ theme }) => theme.breakPoint.mobileMax}px) {
+    margin: 0;
+  };
+`;
 
-export const DetailFacts = styled.div``
+export const DetailRole = styled.h3`
+  text-align: center;
+  font-size: 28px;
+  margin: 0;
+  color:${({ theme }) => theme.color.secondaryText};
+`;
+
+export const DetailFacts = styled.div`
+  font-size: 26px;
+`;
+
+export const Item = styled.div` 
+  width: fit-content;
+`;

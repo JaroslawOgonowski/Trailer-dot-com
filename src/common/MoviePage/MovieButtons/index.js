@@ -15,11 +15,11 @@ export const MovieButtons = () => {
         </Button>
       </Box>
       <Box href="#infoMarker">
-      <Button onClick={() => dispatch(toggleInfo())}>
-        <Icon>i</Icon>More
-      </Button>
+        <Button onClick={() => dispatch(toggleInfo())}>
+          <Icon>i</Icon>More
+        </Button>
       </Box>
-      
+
     </StyledButtons>
   )
 };

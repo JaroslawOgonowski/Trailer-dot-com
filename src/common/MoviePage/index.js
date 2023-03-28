@@ -33,8 +33,6 @@ import { useSelector } from "react-redux";
 import { selectHide, selectHideInfo, selectMovies, selectTitle } from "../../features/Movie/movieSlice";
 import { Carousel } from "./Carousel";
 
-
-
 export const MoviePage = () => {
   const hideTrailer = useSelector(selectHide);
   const hideInfo = useSelector(selectHideInfo)
@@ -88,8 +86,8 @@ export const MoviePage = () => {
               <InfoMarker id="infoMarker" hideInfo={hideInfo} />
               <Carousel />
               <Avaible>
-                Available on:<StreamingLogo width="180px" src={movie.avaible}/>
-                </Avaible>
+                Available on:<StreamingLogo width="180px" src={movie.avaible} />
+              </Avaible>
             </Box>
           </li>
         ))}

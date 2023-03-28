@@ -24,7 +24,7 @@ export const Marker = styled.div`
 export const MovieBox = styled.div`
   display: flex;
   align-items: center;
-  gap: 180px;
+  gap: 100px;
   margin-bottom: 100px;
   
   @media(max-width: ${({ theme }) => theme.breakPoint.fullPage}px) {
@@ -42,6 +42,7 @@ export const Title = styled.h1`
   color: ${({ theme }) => theme.color.mainText};
   font-family: 'Stranger back in the Night', sans-serif;                                                
   font-style: normal;
+  width: 100%;
   font-weight: 400;
   font-size: 200px;
   margin: 0;
@@ -56,8 +57,8 @@ export const Title = styled.h1`
 `;
 
 export const Trailer = styled.iframe`
-  width: 500px;
-  height: 300px;
+  width: 100%;
+  height: 22vw;
   
   &&{
     ${({ hideTrailer }) => hideTrailer && css`{
@@ -66,7 +67,8 @@ export const Trailer = styled.iframe`
   };
   
   @media(max-width: ${({ theme }) => theme.breakPoint.fullPage}px) {
-    margin-bottom: 46px;
+  width: 600px;
+  height: 350px
   };
   
   @media(max-width: ${({ theme }) => theme.breakPoint.minimalVersion}px) { 
