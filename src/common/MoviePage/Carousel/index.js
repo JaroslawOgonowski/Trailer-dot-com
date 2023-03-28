@@ -48,7 +48,7 @@ export const Carousel = () => {
       </Item>
     ));
   };
-  const [activeIndex, setActiveIndex] = useState(-1);
+  const [activeIndex, setActiveIndex] = useState(0);
   const [items] = useState(createItems([setActiveIndex]));
   const slidePrev = () => setActiveIndex(activeIndex - 1);
   const slideNext = () => setActiveIndex(activeIndex + 1);

@@ -80,7 +80,7 @@ export const ActorDetail = styled.div`
 background-color:${({ theme }) => theme.color.menuBackground};
 color:${({ theme }) => theme.color.mainText};
 width: 100%;
-height: 70vh;
+height: auto;
 margin: 50px 0;
 justify-content: center;
 align-self: center;
@@ -89,6 +89,7 @@ bottom: 20px;
 border-radius:5px;
 display: grid;
 grid-template-columns: 2fr 1fr;
+align-items: center;
 gap: 10px;
 transition: 0.8s;
 @media(max-width: ${({ theme }) => theme.breakPoint.mobileMax}px) {
