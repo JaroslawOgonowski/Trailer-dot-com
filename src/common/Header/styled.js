@@ -19,6 +19,7 @@ export const Logo = styled.img`
   transition: 1s;
   margin: 54px 100px 0 100px;
   width: 300px;
+  height: auto;
 
   @media(max-width: ${({ theme }) => theme.breakPoint.notebook}px) {
     margin: 48px 16px 0 16px;
@@ -26,7 +27,8 @@ export const Logo = styled.img`
   
   @media(max-width: ${({ theme }) => theme.breakPoint.minimalVersion}px) {
     margin: 60px 16px 0 16px;
-    width: 250px;  
+    max-width: 250px;  
+    height: auto;
   };  
 
   &:hover{
