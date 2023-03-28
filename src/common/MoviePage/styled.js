@@ -48,8 +48,9 @@ export const Title = styled.h1`
   margin: 0;
   padding-bottom: 130px;
   
-  @media(max-width: ${({ theme }) => theme.breakPoint.minimalVersion}px) { 
+  @media(max-width: ${({ theme }) => theme.breakPoint.notebook}px) { 
     align-self: center;
+    text-align: center;
     padding-bottom: 0;
     font-size: 30vw;
     margin-bottom: 80px;
@@ -67,16 +68,24 @@ export const Trailer = styled.iframe`
   };
   
   @media(max-width: ${({ theme }) => theme.breakPoint.fullPage}px) {
-  width: 600px;
-  height: 350px
+    width: 600px;
+    height: 350px;
   };
   
-  @media(max-width: ${({ theme }) => theme.breakPoint.minimalVersion}px) { 
-    width: 250px;
-    height:150px;
+  @media(max-width: ${({ theme }) => theme.breakPoint.notebook}px) { 
     align-self: center;
-    margin-bottom: 80px;
-  }
+  };
+
+  @media(max-width: ${({ theme }) => theme.breakPoint.mobileMax}px) { 
+    width: 500px;
+    height: 300px;
+  };
+
+  @media(max-width: ${({ theme }) => theme.breakPoint.minimalVersion}px) { 
+    width: 80vw;
+    height:30vh;
+    align-self: center;
+  };
 `;
 
 export const MovieInformation = styled.div`
