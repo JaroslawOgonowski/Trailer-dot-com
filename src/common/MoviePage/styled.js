@@ -24,7 +24,7 @@ export const Marker = styled.div`
 export const MovieBox = styled.div`
   display: flex;
   align-items: center;
-  gap: 100px;
+  gap: 40px;
   margin-bottom: 100px;
   
   @media(max-width: ${({ theme }) => theme.breakPoint.fullPage}px) {
@@ -40,11 +40,11 @@ export const MovieBox = styled.div`
 
 export const Title = styled.h1`
   color: ${({ theme }) => theme.color.mainText};
-  font-family: 'Stranger back in the Night', sans-serif;                                                
+  font-family: 'Fredericka the Great', cursive;                                               
   font-style: normal;
   width: 100%;
   font-weight: 400;
-  font-size: 200px;
+  font-size: 90px;
   margin: 0;
   padding-bottom: 130px;
   
@@ -52,7 +52,7 @@ export const Title = styled.h1`
     align-self: center;
     text-align: center;
     padding-bottom: 0;
-    font-size: 30vw;
+    font-size: 12vw;
     margin-bottom: 80px;
   };
 `;
@@ -89,7 +89,7 @@ export const Trailer = styled.iframe`
 `;
 
 export const MovieInformation = styled.div`
-  font-family: 'Segoe UI';
+font-family: 'Noto Sans Sinhala', sans-serif;
   font-style: normal;
   color: ${({ theme }) => theme.color.mainText};
   display: flex;
@@ -115,7 +115,7 @@ export const Specification = styled.div`
 export const Tags = styled.div`
   align-items: center;
   color: #FFFFFF;
-  font-family: 'Segoe UI';
+  font-family: 'Noto Sans Sinhala', sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
@@ -238,6 +238,8 @@ export const Avaible = styled.div`
 `;
 
 export const StreamingLogo = styled.img`
+width:180px;
+height: auto;
   margin-top: 16px;
   @media(max-width: ${({ theme }) => theme.breakPoint.mobileMax}px) {
     width: 100px;

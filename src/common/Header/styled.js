@@ -15,7 +15,6 @@ export const HeaderContainer = styled.div`
 `;
 
 export const Logo = styled.img`
-  width: 300px;
   opacity: 0.6;
   transition: 1s;
   margin: 54px 100px 0 100px;

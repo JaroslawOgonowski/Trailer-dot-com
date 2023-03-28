@@ -55,6 +55,7 @@ export const MoviePage = () => {
                 SameSite="none"
                 allow="fullscreen;"
                 Secure
+                alt="Movie Trailer"
                 src={movie.iFrame}
                 title="YouTube video player"
               />
@@ -86,7 +87,7 @@ export const MoviePage = () => {
               <InfoMarker id="infoMarker" />
               <Carousel />
               <Avaible>
-                Available on:<StreamingLogo width="180px" src={movie.avaible} />
+                Available on:<StreamingLogo width="180px" height="100px" alt="" src={movie.avaible} />
               </Avaible>
             </Box>
           </li>

@@ -26,7 +26,7 @@ export const Header = () => {
     }
     return <NoSearchResultMsg>
       We couldn't find <br />this video ❗
-      </NoSearchResultMsg>;
+    </NoSearchResultMsg>;
   };
 
   function getFilteredMoviesForText(text) {
@@ -44,9 +44,7 @@ export const Header = () => {
 
   return (
     <HeaderContainer>
-      
-        <Logo src={TrailersLogo} alt="" onClick={() => dispatch(getInitialState())}/>
-      
+      <Logo width="300px" height="134.29px" src={TrailersLogo} alt="" onClick={() => dispatch(getInitialState())} />
       <Menu>
         <MenuFrame onMouseEnter={() => dispatch(toggleMenu())}>
           <MenuElement>Get movie ⁞⁞</MenuElement>

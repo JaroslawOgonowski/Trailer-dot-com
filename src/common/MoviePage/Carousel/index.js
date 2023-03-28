@@ -68,14 +68,14 @@ export const Carousel = () => {
         disableDotsControls
         infinite
         renderPrevButton={() => {
-          return <CarouselButton previous onClick={slidePrev}><Arrow /></CarouselButton>
+          return <CarouselButton aria-label="Previous button" previous onClick={slidePrev}><Arrow /></CarouselButton>
         }}
         renderNextButton={() => {
-          return <CarouselButton next onClick={slideNext}><Arrow /></CarouselButton>
+          return <CarouselButton aria-label="Next button" next onClick={slideNext}><Arrow /></CarouselButton>
         }}
       />
       <ActorDetail>
-        <DetailPhoto alt="" src={actor.photo ? actor.photo : "https://multivoucher.pl/wp-content/uploads/2020/11/cinema-city-big.jpg"} />
+        <DetailPhoto alt="" width="980px" height="554px" src={actor.photo ? actor.photo : "https://multivoucher.pl/wp-content/uploads/2020/11/cinema-city-big.jpg"} />
         <DetailTextBox>
           <DetailName>{actor.actor ? actor.actor : "Choose an actor..."}</DetailName>
           <DetailRole>{actor.role}</DetailRole>

@@ -3,7 +3,7 @@ import styled, { css } from "styled-components";
 export const StyledButtons = styled.div`
   display: flex;  
   gap: 22px;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Roboto', sans-serif;
   margin-bottom: 26px;
   margin-bottom: 100px;
   
