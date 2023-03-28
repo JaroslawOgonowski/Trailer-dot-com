@@ -1,23 +1,26 @@
 import { createSlice } from "@reduxjs/toolkit";
+import { getStateFromLocalStorage } from "./stateLocalStorage";
 
 const movieSlice = createSlice({
-  name: "actualState",
-  initialState: {
+  name: "movie",
+  initialState: getStateFromLocalStorage() || {
     loading: false,
     movies: [],
     hideTrailer: true,
     status: null,
     hideMenu: true,
-    hideInfo: false,
     actor: []
   },
 
   reducers: {
+    getInitialState: state => {
+      state.hideTrailer = true;
+      state.hideMenu = true;
+      state.actor = [];
+      state.title = null;
+    },
     toggleHide: state => {
       state.hideTrailer = !state.hideTrailer;
-    },
-    toggleInfo: state => {
-      state.hideInfo = !state.hideInfo;
     },
     fetchMovies: (state) => {
       state.loading = true;
@@ -37,7 +40,6 @@ const movieSlice = createSlice({
       const index = state.movies.findIndex(selectedMovie => selectedMovie.id === action.payload);
       state.title = state.movies[index].title;
       state.moreInfo = state.movies[index].moreInfo;
-      state.hideInfo = false;
       state.hideMenu = true;
       state.actor = [];
     },
@@ -49,6 +51,7 @@ const movieSlice = createSlice({
 });
 
 export const {
+  getInitialState,
   toggleHide,
   toggleActor,
   toggleMovie,
@@ -68,6 +71,5 @@ export const selectMovies = (state) => selectState(state).movies;
 export const selectMenu = (state) => selectState(state).hideMenu;
 export const selectTitle = (state) => selectState(state).title;
 export const selectInfo = (state) => selectState(state).moreInfo;
-export const selectHideInfo = (state) => selectState(state).hideInfo;
 export const selectActor = (state) => selectState(state).actor;
 export default movieSlice.reducer;

@@ -5,4 +5,4 @@ export const saveStateInLocalStorage = (state) => {
 };
 
 export const getStateFromLocalStorage = () =>
-  JSON.parse(localStorage.getItem(localStorageKey)) || [];
+  JSON.parse(localStorage.getItem(localStorageKey));

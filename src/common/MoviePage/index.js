@@ -3,6 +3,9 @@ import MovieButtons from "./MovieButtons";
 import { ReactComponent as Top10 } from "./images/Top10.svg";
 import { ReactComponent as Audio } from "./images/Audio.svg";
 import { ReactComponent as SubtitlesIcon } from "./images/SubtitlesIcon.svg";
+import { useSelector } from "react-redux";
+import { selectHide, selectMovies, selectTitle } from "../../features/Movie/movieSlice";
+import { Carousel } from "./Carousel";
 import {
   AgeGroup,
   AudioStream,
@@ -29,13 +32,10 @@ import {
   Trailer,
   Year,
 } from "./styled";
-import { useSelector } from "react-redux";
-import { selectHide, selectHideInfo, selectMovies, selectTitle } from "../../features/Movie/movieSlice";
-import { Carousel } from "./Carousel";
+
 
 export const MoviePage = () => {
   const hideTrailer = useSelector(selectHide);
-  const hideInfo = useSelector(selectHideInfo)
   const movie = useSelector(selectMovies);
   const title = useSelector(selectTitle);
   const selectedMovie = movie.filter(element => element.title === title);
@@ -82,8 +82,8 @@ export const MoviePage = () => {
                 <Label>This show is:<OtherInfo>{" "}{movie.thisShowIs}</OtherInfo></Label>
               </MovieData>
             </MovieInformation>
-            <Box hideInfo={hideInfo}>
-              <InfoMarker id="infoMarker" hideInfo={hideInfo} />
+            <Box>
+              <InfoMarker id="infoMarker" />
               <Carousel />
               <Avaible>
                 Available on:<StreamingLogo width="180px" src={movie.avaible} />

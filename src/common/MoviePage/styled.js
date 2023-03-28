@@ -213,37 +213,33 @@ export const OtherInfo = styled.span`
 `;
 
 export const Box = styled.div`
-margin-bottom: 50px;
- &&{
-    ${({ hideInfo }) => hideInfo && css`{
-      display: none;
-    }`};
-  };
+  margin-bottom: 50px;
 `;
 
 export const InfoMarker = styled.div`
-position: relative;
-top:-80px;
+  position: relative;
+  top:-80px;
 `;
 
 export const Avaible = styled.div`
-font-size: 22px;
-position: relative;
-bottom: 10px;
-left:0px;
-color: white;
-display: flex;
-flex-direction: column;
-justify-content: center;
-align-items: center;
+  font-size: 22px;
+  position: relative;
+  bottom: 10px;
+  left:0px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 
   @media(max-width: ${({ theme }) => theme.breakPoint.mobileMax}px) {
-  flex-wrap : wrap;
+    flex-wrap : wrap;
   };
-`
+`;
+
 export const StreamingLogo = styled.img`
-margin-top: 16px;
-@media(max-width: ${({ theme }) => theme.breakPoint.mobileMax}px) {
-  width: 100px;
+  margin-top: 16px;
+  @media(max-width: ${({ theme }) => theme.breakPoint.mobileMax}px) {
+    width: 100px;
   };
 `;

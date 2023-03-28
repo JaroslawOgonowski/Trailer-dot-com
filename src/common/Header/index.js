@@ -1,5 +1,5 @@
 import { useDispatch, useSelector } from "react-redux";
-import { selectMenu, selectMovies, toggleMenu, toggleMovie } from "../../features/Movie/movieSlice";
+import { getInitialState, selectMenu, selectMovies, toggleMenu, toggleMovie } from "../../features/Movie/movieSlice";
 import { Box, HeaderContainer, Item, ListOfMoviesComponent, Logo, Menu, MenuContainer, MenuElement, MenuFrame, MenuTitle, NoSearchResultMsg, SearchMovieInput } from "./styled"
 import TrailersLogo from "./images/Logo.png"
 import { useState } from "react";
@@ -24,7 +24,9 @@ export const Header = () => {
         </ListOfMoviesComponent>
       );
     }
-    return <NoSearchResultMsg>We couldn't find <br />this video</NoSearchResultMsg>;
+    return <NoSearchResultMsg>
+      We couldn't find <br />this video ❗
+      </NoSearchResultMsg>;
   };
 
   function getFilteredMoviesForText(text) {
@@ -42,9 +44,9 @@ export const Header = () => {
 
   return (
     <HeaderContainer>
-      <a href="https://jaroslawogonowski.github.io/Trailer-dot-com/">
-        <Logo src={TrailersLogo} alt="" />
-      </a>
+      
+        <Logo src={TrailersLogo} alt="" onClick={() => dispatch(getInitialState())}/>
+      
       <Menu>
         <MenuFrame onMouseEnter={() => dispatch(toggleMenu())}>
           <MenuElement>Get movie ⁞⁞</MenuElement>
