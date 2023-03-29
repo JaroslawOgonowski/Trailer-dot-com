@@ -1,8 +1,25 @@
-import { useDispatch, useSelector } from "react-redux";
-import { getInitialState, selectMenu, selectMovies, toggleMenu, toggleMovie } from "../../features/Movie/movieSlice";
-import { Box, HeaderContainer, Item, ListOfMoviesComponent, Logo, Menu, MenuElement, MenuFrame, NoSearchResultMsg, SearchMovieInput } from "./styled"
-import TrailersLogo from "./images/Logo.png"
 import { useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import TrailersLogo from "./images/Logo.png"
+import {
+  getInitialState,
+  selectMenu,
+  selectMovies,
+  toggleMenu,
+  toggleMovie
+} from "../../features/Movie/movieSlice";
+import {
+  Box,
+  HeaderContainer,
+  Item,
+  ListOfMoviesComponent,
+  Logo,
+  Menu,
+  MenuElement,
+  MenuFrame,
+  NoSearchResultMsg,
+  SearchMovieInput
+} from "./styled"
 
 export const Header = () => {
   const dispatch = useDispatch();

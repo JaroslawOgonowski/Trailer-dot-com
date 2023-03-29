@@ -78,26 +78,27 @@ export const Box = styled.div`
 `;
 
 export const ActorDetail = styled.div`
-background-color:${({ theme }) => theme.color.menuBackground};
-color:${({ theme }) => theme.color.mainText};
-width: 100%;
-height: auto;
-margin: 20px 0;
-justify-items: center;
-align-self: center;
-position: relative;
-bottom: 20px;
-border-radius:5px;
-display: grid;
-grid-template-columns: 2fr 1fr;
-align-items: center;
-transition: 0.8s;
-@media(max-width: ${({ theme }) => theme.breakPoint.mobileMax}px) {
-  bottom: 20px;
-  display:flex;
-  flex-direction: column;
+  background-color:${({ theme }) => theme.color.menuBackground};
+  color:${({ theme }) => theme.color.mainText};
+  width: 100%;
   height: auto;
-}
+  margin: 20px 0;
+  justify-items: center;
+  align-self: center;
+  position: relative;
+  bottom: 20px;
+  border-radius:5px;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  align-items: center;
+  transition: 0.8s;
+  
+  @media(max-width: ${({ theme }) => theme.breakPoint.mobileMax}px) {
+    bottom: 20px;
+    display:flex;
+    flex-direction: column;
+    height: auto;
+  };
 `;
 
 export const DetailPhoto = styled.img` 

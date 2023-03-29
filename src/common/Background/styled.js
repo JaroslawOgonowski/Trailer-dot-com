@@ -1,6 +1,7 @@
 import styled from "styled-components";
+
 export const Preload = styled.div`
-display: none;
+  display: none;
 `;
 
 export const StyledBackground = styled.li`
