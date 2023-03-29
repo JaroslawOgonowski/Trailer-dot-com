@@ -7,7 +7,8 @@ export const Wrapper = styled.div`
   @media(max-width: ${({ theme }) => theme.breakPoint.notebook}px) {
     width:100%;
     @media(max-width: ${({ theme }) => theme.breakPoint.mobileMax}px) {
-  height: fit-content;
+    height: fit-content;
+    margin-top: 30px;
   };  
   };
 `;
@@ -81,8 +82,8 @@ background-color:${({ theme }) => theme.color.menuBackground};
 color:${({ theme }) => theme.color.mainText};
 width: 100%;
 height: auto;
-margin: 50px 0;
-justify-content: center;
+margin: 20px 0;
+justify-items: center;
 align-self: center;
 position: relative;
 bottom: 20px;
@@ -90,7 +91,6 @@ border-radius:5px;
 display: grid;
 grid-template-columns: 2fr 1fr;
 align-items: center;
-gap: 10px;
 transition: 0.8s;
 @media(max-width: ${({ theme }) => theme.breakPoint.mobileMax}px) {
   bottom: 20px;
@@ -101,10 +101,10 @@ transition: 0.8s;
 `;
 
 export const DetailPhoto = styled.img` 
-  width:100%;
+  width: 100%;
   transition: 1s;
-  height: 70vh;
-  scale:0.95;
+  height: 60vh;
+  scale:0.95;  
   object-fit: cover;
   border-radius: 5px;
   object-position: 50% 20%;
@@ -126,6 +126,7 @@ export const DetailName = styled.h2`
   
   @media(max-width: ${({ theme }) => theme.breakPoint.mobileMax}px) {
     margin: 0;
+    font-size: 30px;
   };
 `;
 
@@ -134,10 +135,18 @@ export const DetailRole = styled.h3`
   font-size: 28px;
   margin: 0;
   color:${({ theme }) => theme.color.secondaryText};
+  
+  @media(max-width: ${({ theme }) => theme.breakPoint.mobileMax}px) {
+    font-size: 22px;
+  };
 `;
 
 export const DetailFacts = styled.div`
   font-size: 26px;
+  
+  @media(max-width: ${({ theme }) => theme.breakPoint.mobileMax}px) {
+    font-size: 20px;
+  };
 `;
 
 export const Item = styled.div` 
