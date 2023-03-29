@@ -1,4 +1,45 @@
-# Project under construction 🛠🆕🚧
+# Trailer Browser 🎬🔍🆕
+My original project inspired by a single page of the film on netflix- 
+but developed into a dynamic application for viewing the trailer.
+
+Demo: https://jaroslawogonowski.github.io/Trailer-dot-com/
+
+## Functionality
+The site has grown a lot since the first working version. It was supposed to be a simple static title page (the main project is available here: https://www.figma.com/file/d1o1xCmwDEYVOwDvGqEjWI/Wednesday-web-design?node-id=0-1&t=f3LIw6TOgPDzJ9EI-0 ) 
+but I wanted to present as much knowledge as possible without violating the coherent concept and at the same time using a simple and clear code.
+
+## How it works? 👀🛠
+### 🆗 The first view...
+ ...of course, resembles a theater stage - in this view you can select a movie from the list or use the search engine. When the phrase you entered does not correspond to any supported title, an appropriate message appears.
+
+ ![Menu](./public/images/menu.gif)
+
+ As you can see, clicking on the logo clears part of the state and returns to the initial view.
+### ⏩ JSON
+I really wanted the page not to differ in appearance from the concept of the project from figma. The problem is that at this stage there was no API from which I could download the information I want to display on the page. So I wrote json with basic information, links to photos, trailer iframe, tags, descriptions, characters and trivia, backgrounds of the whole page and even specific css that I pass depending on the selected movie. 
+The project focuses on showing a completely dynamic single page and not my knowledge of cinematography (maybe someday 😅) that's why there are only two films
+
+You can find the movies.json file in "public" folder.
+### ⏩ FETCH, REDUX-SAGA, GENERATOR FUNCTIONS
+All this information is fetched with "fetch" immediately after displaying the page and from that moment every action of yours affects the state of the application which is constantly saved in local storage using redux-saga and generator functions.
+### ⏩useSelector, STATE, REDUCER
+When a movie is selected, its title is pulled into the state and compared with the titles of the downloaded objects contained in the json file and filtered accordingly. Now information about this movie is shown on our website and after refreshing the state is loaded from local storage.
+
+MovieSlice is responsible for most of the website's functionality. We have here the current state, reducer - which correspond to individual actions, and selectors thanks to which we can easily navigate through the content of our application's state.
+
+### ⏩ iframe, ANIMATED BACKGROUND
+Thanks to the use of iframes, we use YouTube resources directly on the website and the implementation and functionality of the video is very simple and transparent.
+
+I added the ability to hide the iframe window - so you can see the animated background of the entire page.
+
+ ![Trailer](./public/images/trailer.gif)
+
+### ⏩ Alice-carousel
+
+One of the more interesting issues was the use of the external alice-carousel library. I created a slider with photos of actors and when it is hovered- displays dynamically information about the actor in a prepared, static (but responsive) div. Of course, I used animations and custom buttons.
+
+ ![Carousel](./public/images/carousel.gif)
+
 
 ## Getting Started with Create React App
 
