@@ -45,7 +45,7 @@ export const ActorRole = styled.div`
 export const CarouselButton = styled.button`
   cursor: pointer;
   position: absolute;
-  background-color: #000000ad;
+  background-color:${({ theme }) => theme.color.menuBackground};
   border: none;
   top:0;
   height: 236px;

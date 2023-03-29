@@ -114,7 +114,7 @@ export const Specification = styled.div`
 
 export const Tags = styled.div`
   align-items: center;
-  color: #FFFFFF;
+  color:${({ theme }) => theme.color.mainText};
   font-family: 'Noto Sans Sinhala', sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -238,9 +238,10 @@ export const Avaible = styled.div`
 `;
 
 export const StreamingLogo = styled.img`
-width:180px;
-height: auto;
+  width:180px;
+  height: auto;
   margin-top: 16px;
+  
   @media(max-width: ${({ theme }) => theme.breakPoint.mobileMax}px) {
     width: 100px;
   };
