@@ -1,7 +1,7 @@
 import React from "react";
 import { useSelector } from "react-redux";
 import { selectMovies, selectTitle } from "../../features/Movie/movieSlice";
-import { ClasicBackground, StyledBackground } from "./styled";
+import { ClasicBackground, Preload, StyledBackground } from "./styled";
 
 const Background = ({ children }) => {
   const movie = useSelector(selectMovies);
@@ -22,6 +22,11 @@ const Background = ({ children }) => {
               thirdBackground={movie.thirdBackground}
               thirdPositionX={movie.thirdPositionX}
             >
+              <Preload>
+                <img src={movie.firstBackground} alt="" />
+                <img src={movie.secondBackground} alt="" />
+                <img src={movie.thirdBackground} alt="" />
+              </Preload>
               {children}
             </StyledBackground>
           ))}
@@ -30,6 +35,11 @@ const Background = ({ children }) => {
     )
   else return (
     <ClasicBackground>
+      <Preload>
+        <img src="https://wallpaperaccess.com/full/2063938.png" alt="" />
+        <img src="https://wallpapercave.com/wp/2TrmmSi.jpg" alt="" />
+        <img src="https://blog.frame.io/wp-content/uploads/2022/04/B0414-featured-image-atomos-v2-1300x731.jpg" alt="" />
+      </Preload>
       {children}
     </ClasicBackground>
   )
