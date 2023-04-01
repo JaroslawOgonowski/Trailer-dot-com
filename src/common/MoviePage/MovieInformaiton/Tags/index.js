@@ -1,5 +1,5 @@
 import { useSelector } from "react-redux";
-import { selectedMovie } from "../../../features/Movie/movieSlice";
+import { selectedMovie } from "../../../../features/Movie/movieSlice";
 import { ReactComponent as Audio } from "./images/Audio.svg";
 import { ReactComponent as SubtitlesIcon } from "./images/SubtitlesIcon.svg";
 import {
@@ -23,5 +23,5 @@ return (
     <AudioStream>{tagAudio ? <Audio /> : null}</AudioStream>
     <Subtitles>{tagSubtitles ? <SubtitlesIcon /> : null}</Subtitles>
   </TagsContainer>
-)
+  );
 };
