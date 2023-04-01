@@ -9,9 +9,6 @@ export const FooterContent = styled.div`
   bottom: 0;
   right: 0;
   left: 0;
-  @media(max-width: ${({ theme }) => theme.breakPoint.notebook}px) {
-  margin-bottom: 0; 
-  };
 `;
 
 export const StyledLink = styled.a`

@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import AliceCarousel from 'react-alice-carousel';
 import 'react-alice-carousel/lib/alice-carousel.css';
-import { selectActor, selectInfo, toggleActor } from '../../../features/Movie/movieSlice';
+import { selectActor, selectInfo, toggleActor } from '../../../../features/Movie/movieSlice';
 import { ReactComponent as Arrow } from "./Arrow.svg";
 import {
   Actor,
