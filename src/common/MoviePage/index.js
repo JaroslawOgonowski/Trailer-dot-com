@@ -4,7 +4,7 @@ import { ReactComponent as Top10 } from "./images/Top10.svg";
 import { ReactComponent as Audio } from "./images/Audio.svg";
 import { ReactComponent as SubtitlesIcon } from "./images/SubtitlesIcon.svg";
 import { useSelector } from "react-redux";
-import { selectHide, selectMovies, selectTitle } from "../../features/Movie/movieSlice";
+import { selectedMovie, selectHide, selectTitle } from "../../features/Movie/movieSlice";
 import { Carousel } from "./Carousel";
 import {
   AgeGroup,
@@ -33,66 +33,63 @@ import {
   Year,
 } from "./styled";
 
-
 export const MoviePage = () => {
   const hideTrailer = useSelector(selectHide);
-  const movie = useSelector(selectMovies);
-  const title = useSelector(selectTitle);
-  const selectedMovie = movie.filter(element => element.title === title);
-
-  if (title != null)
+  const selectedTitle = useSelector(selectTitle);
+  const movie = useSelector(selectedMovie);
+  if (selectedTitle != null && movie != null) {
+    const { title, iFrame, tagYear, tagGroup, tagEpisodes, tagStandard, tagAudio, tagSubtitles, top10, subtitle, description, topContent, cast, genres, thisShowIs, avaible } = movie;
     return (
       <StyledPage>
         <Marker id="trailer" hideTrailer={hideTrailer} />
-        {selectedMovie.map(movie => (
-          <li key={movie.name}>
-            <MovieBox >
-              <Title >{movie.title}</Title>
-              <Trailer
-                hideTrailer={hideTrailer}
-                width=""
-                height=""
-                SameSite="none"
-                allow="fullscreen;"
-                Secure
-                alt="Movie Trailer"
-                src={movie.iFrame}
-                title="YouTube video player"
-              />
-            </MovieBox>
-            <MovieButtons />
-            <MovieInformation>
-              <Specification>
-                <Tags>
-                  <Year>{movie.tagYear}</Year>
-                  <AgeGroup>{movie.tagGroup}</AgeGroup>
-                  <Episodes>{movie.tagEpisodes}</Episodes>
-                  <HighestStandard>{movie.tagStandard}</HighestStandard>
-                  <AudioStream>{movie.tagAudio ? <Audio /> : null}</AudioStream>
-                  <Subtitles>{movie.tagSubtitles ? <SubtitlesIcon /> : null}</Subtitles>
-                </Tags>
-                <Top>{movie.top10 ? <Top10 /> : null}{movie.topContent}</Top>
-                <Subtitle>{movie.subtitle}</Subtitle>
-                <Description>
-                  {movie.description}
-                </Description>
-              </Specification>
-              <MovieData>
-                <Label>Cast:<OtherInfo>{" "}{movie.cast}</OtherInfo></Label>
-                <Label>Genres:<OtherInfo>{" "}{movie.genres}</OtherInfo></Label>
-                <Label>This show is:<OtherInfo>{" "}{movie.thisShowIs}</OtherInfo></Label>
-              </MovieData>
-            </MovieInformation>
-            <Box>
-              <InfoMarker id="infoMarker" />
-              <Carousel />
-              <Avaible>
-                Available on:<StreamingLogo width="180px" height="100px" alt="" src={movie.avaible} />
-              </Avaible>
-            </Box>
-          </li>
-        ))}
+        <MovieBox >
+          <Title >{title}</Title>
+          <Trailer
+            hideTrailer={hideTrailer}
+            width=""
+            height=""
+            SameSite="none"
+            allow="fullscreen;"
+            Secure
+            alt="Movie Trailer"
+            src={iFrame}
+            title="YouTube video player"
+          />
+        </MovieBox>
+        <MovieButtons />
+        <MovieInformation>
+          <Specification>
+            <Tags>
+              <Year>{tagYear}</Year>
+              <AgeGroup>{tagGroup}</AgeGroup>
+              <Episodes>{tagEpisodes}</Episodes>
+              <HighestStandard>{tagStandard}</HighestStandard>
+              <AudioStream>{tagAudio ? <Audio /> : null}</AudioStream>
+              <Subtitles>{tagSubtitles ? <SubtitlesIcon /> : null}</Subtitles>
+            </Tags>
+            <Top>{top10 ? <Top10 /> : null}{topContent}</Top>
+            <Subtitle>{subtitle}</Subtitle>
+            <Description>
+              {description}
+            </Description>
+          </Specification>
+          <MovieData>
+            <Label>Cast:<OtherInfo>{" "}{cast}</OtherInfo></Label>
+            <Label>Genres:<OtherInfo>{" "}{genres}</OtherInfo></Label>
+            <Label>This show is:<OtherInfo>{" "}{thisShowIs}</OtherInfo></Label>
+          </MovieData>
+        </MovieInformation>
+        <Box>
+          <InfoMarker id="infoMarker" />
+          <Carousel />
+          <Avaible>
+            Available on:<StreamingLogo width="180px" height="100px" alt="" src={avaible} />
+          </Avaible>
+        </Box>
+
+
       </StyledPage>
     )
+  }
   else return;
 };
