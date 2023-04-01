@@ -1,19 +1,13 @@
 import React from "react";
 import MovieButtons from "./MovieButtons";
 import { ReactComponent as Top10 } from "./images/Top10.svg";
-import { ReactComponent as Audio } from "./images/Audio.svg";
-import { ReactComponent as SubtitlesIcon } from "./images/SubtitlesIcon.svg";
 import { useSelector } from "react-redux";
 import { selectedMovie, selectHide, selectTitle } from "../../features/Movie/movieSlice";
 import { Carousel } from "./Carousel";
 import {
-  AgeGroup,
-  AudioStream,
   Avaible,
   Box,
   Description,
-  Episodes,
-  HighestStandard,
   InfoMarker,
   Label,
   Marker,
@@ -25,20 +19,21 @@ import {
   StreamingLogo,
   StyledPage,
   Subtitle,
-  Subtitles,
-  Tags,
   Title,
   Top,
-  Trailer,
-  Year,
+  Trailer
 } from "./styled";
+import { Tags } from "./Tags";
 
 export const MoviePage = () => {
   const hideTrailer = useSelector(selectHide);
   const selectedTitle = useSelector(selectTitle);
   const movie = useSelector(selectedMovie);
   if (selectedTitle != null && movie != null) {
-    const { title, iFrame, tagYear, tagGroup, tagEpisodes, tagStandard, tagAudio, tagSubtitles, top10, subtitle, description, topContent, cast, genres, thisShowIs, avaible } = movie;
+    const { 
+      title, 
+      iFrame, 
+      top10, subtitle, description, topContent, cast, genres, thisShowIs, avaible } = movie;
     return (
       <StyledPage>
         <Marker id="trailer" hideTrailer={hideTrailer} />
@@ -59,14 +54,7 @@ export const MoviePage = () => {
         <MovieButtons />
         <MovieInformation>
           <Specification>
-            <Tags>
-              <Year>{tagYear}</Year>
-              <AgeGroup>{tagGroup}</AgeGroup>
-              <Episodes>{tagEpisodes}</Episodes>
-              <HighestStandard>{tagStandard}</HighestStandard>
-              <AudioStream>{tagAudio ? <Audio /> : null}</AudioStream>
-              <Subtitles>{tagSubtitles ? <SubtitlesIcon /> : null}</Subtitles>
-            </Tags>
+            <Tags />
             <Top>{top10 ? <Top10 /> : null}{topContent}</Top>
             <Subtitle>{subtitle}</Subtitle>
             <Description>
@@ -86,10 +74,8 @@ export const MoviePage = () => {
             Available on:<StreamingLogo width="180px" height="100px" alt="" src={avaible} />
           </Avaible>
         </Box>
-
-
       </StyledPage>
-    )
+    );
   }
   else return;
 };
