@@ -6,11 +6,19 @@ export const Wrapper = styled.div`
   
   @media(max-width: ${({ theme }) => theme.breakPoint.notebook}px) {
     width:100%;
-    @media(max-width: ${({ theme }) => theme.breakPoint.mobileMax}px) {
+  };  
+  
+  @media(max-width: ${({ theme }) => theme.breakPoint.mobileMax}px) {
     height: fit-content;
     margin-top: 30px;
   };  
-  };
+`;
+
+export const StyledCarousel = styled.div`
+background-color:${({ theme }) => theme.color.buttonBackground};
+border-radius: 5px;
+margin: 0;
+padding: 0;
 `;
 
 export const Actor = styled.div`
@@ -46,16 +54,17 @@ export const ActorRole = styled.div`
 export const CarouselButton = styled.button`
   cursor: pointer;
   position: absolute;
+  top:15px;
   background-color:${({ theme }) => theme.color.menuBackground};
-  border: none;
-  top:0;
+  box-shadow: -13px 3px 33px 4px rgba(0, 0, 0, 0.81);
+  border: none; 
   height: 236px;
   opacity:0.5;
   transition: 0.5s;
-  box-shadow: -13px 3px 33px 4px rgba(0, 0, 0, 0.81);
 
   &:hover{
-    opacity: 1;
+    opacity: 1;    
+    transform: scale(1.1)
   };
 
   &&{ 
@@ -66,7 +75,6 @@ export const CarouselButton = styled.button`
 
   &&{ 
     ${({ previous }) => previous && css`
-  transform: rotate(180deg);
   left:0;
   `}
   };
@@ -80,6 +88,7 @@ export const Box = styled.div`
 export const ActorDetail = styled.div`
   background-color:${({ theme }) => theme.color.menuBackground};
   color:${({ theme }) => theme.color.mainText};
+  box-shadow: -13px 3px 33px 4px rgba(0, 0, 0, 1);
   width: 100%;
   height: auto;
   margin: 20px 0;
@@ -152,4 +161,11 @@ export const DetailFacts = styled.div`
 
 export const Item = styled.div` 
   width: fit-content;
+`;
+
+export const ActorName = styled.div`
+display: none;
+`;
+export const ActorFacts = styled.div`
+display: none;
 `;

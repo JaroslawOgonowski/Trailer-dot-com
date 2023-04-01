@@ -6,7 +6,7 @@ export const Box = styled.div`
 
 export const InfoMarker = styled.div`
   position: relative;
-  top:-80px;
+  top:-25px;
 `;
 
 export const Avaible = styled.div`

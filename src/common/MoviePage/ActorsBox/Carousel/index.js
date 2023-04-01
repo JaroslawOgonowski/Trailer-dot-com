@@ -3,10 +3,13 @@ import { useDispatch, useSelector } from 'react-redux';
 import AliceCarousel from 'react-alice-carousel';
 import 'react-alice-carousel/lib/alice-carousel.css';
 import { selectActor, selectInfo, toggleActor } from '../../../../features/Movie/movieSlice';
-import { ReactComponent as Arrow } from "./Arrow.svg";
+import { ReactComponent as Next } from "./Next.svg";
+import { ReactComponent as Previous } from "./Previous.svg";
 import {
   Actor,
   ActorDetail,
+  ActorFacts,
+  ActorName,
   ActorPhoto,
   ActorRole,
   Box,
@@ -17,18 +20,19 @@ import {
   DetailRole,
   DetailTextBox,
   Item,
+  StyledCarousel,
   Wrapper
 } from './styled';
 
 export const Carousel = () => {
   const info = useSelector(selectInfo);
   const dispatch = useDispatch();
-  const actor = useSelector(selectActor);
+  const { actor, role, photo, facts } = useSelector(selectActor);
 
   const createItems = () => {
     let deltaX = 0;
     let difference = 0;
-    const swipeDelta = 20;
+    const swipeDelta = 60;
 
     return Array.from(info).map((info, i) => (
       <Item
@@ -40,9 +44,11 @@ export const Carousel = () => {
         onClick={() => (difference < swipeDelta)}
       >
         <Box>
-          <Actor className="actor">
+          <Actor>
             <ActorPhoto alt="" onMouseEnter={() => dispatch(toggleActor(info.actor))} width="150px" height="180px" src={info.photo}></ActorPhoto>
+            <ActorName>{info.actor}</ActorName>
             <ActorRole>{info.role}</ActorRole>
+            <ActorFacts>{info.facts}</ActorFacts>
           </Actor>
         </Box>
       </Item>
@@ -56,32 +62,38 @@ export const Carousel = () => {
 
   return (
     <Wrapper>
-      <AliceCarousel
-        items={items}
-        activeIndex={activeIndex}
-        onSlideChanged={syncActiveIndex}
-        autoWidth
-        animationType="fadeout"
-        animationDuration={800}
-        paddingLeft={50}
-        paddingRight={50}
-        disableDotsControls
-        infinite
-        renderPrevButton={() => {
-          return <CarouselButton aria-label="Previous button" previous onClick={slidePrev}><Arrow /></CarouselButton>
-        }}
-        renderNextButton={() => {
-          return <CarouselButton aria-label="Next button" next onClick={slideNext}><Arrow /></CarouselButton>
-        }}
-      />
+      <StyledCarousel>
+        <AliceCarousel
+          items={items}
+          activeIndex={activeIndex}
+          onSlideChanged={syncActiveIndex}
+          autoWidth
+          animationType="fadeout"
+          animationDuration={800}
+          paddingLeft={50}
+          paddingRight={50}
+          disableDotsControls
+          renderPrevButton={() => {
+            return <CarouselButton aria-label="Previous button" previous onClick={slidePrev}><Previous /></CarouselButton>
+          }}
+          renderNextButton={() => {
+            return <CarouselButton aria-label="Next button" next onClick={slideNext}><Next /></CarouselButton>
+          }}
+        />
+      </StyledCarousel>
       <ActorDetail>
-        <DetailPhoto alt="" width="980px" height="554px" src={actor.photo ? actor.photo : "https://multivoucher.pl/wp-content/uploads/2020/11/cinema-city-big.jpg"} />
+        <DetailPhoto
+          alt=""
+          width="980px"
+          height="554px"
+          src={
+            photo ?
+              photo : "https://multivoucher.pl/wp-content/uploads/2020/11/cinema-city-big.jpg"} />
         <DetailTextBox>
-          <DetailName>{actor.actor ? actor.actor : "Choose an actor..."}</DetailName>
-          <DetailRole>{actor.role}</DetailRole>
-          <DetailFacts>{actor.facts ? actor.facts : "🎬"}</DetailFacts>
+          <DetailName>{actor ? actor : "Choose an actor..."}</DetailName>
+          <DetailRole>{role}</DetailRole>
+          <DetailFacts>{facts ? facts : "🎬"}</DetailFacts>
         </DetailTextBox>
-
       </ActorDetail>
     </Wrapper>
   );
