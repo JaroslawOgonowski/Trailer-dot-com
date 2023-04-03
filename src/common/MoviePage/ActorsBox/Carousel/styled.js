@@ -3,11 +3,7 @@ import styled, { css } from "styled-components";
 export const Wrapper = styled.div`
   margin-top:80px;
   width: 100%;
-  
-  @media(max-width: ${({ theme }) => theme.breakPoint.notebook}px) {
-    width:100%;
-  };  
-  
+    
   @media(max-width: ${({ theme }) => theme.breakPoint.mobileMax}px) {
     height: fit-content;
     margin-top: 30px;
@@ -15,10 +11,10 @@ export const Wrapper = styled.div`
 `;
 
 export const StyledCarousel = styled.div`
-background-color:${({ theme }) => theme.color.buttonBackground};
-border-radius: 5px;
-margin: 0;
-padding: 0;
+  background-color:${({ theme }) => theme.color.buttonBackground};
+  border-radius: 5px;
+  margin: 0;
+  padding: 0;
 `;
 
 export const Actor = styled.div`
@@ -52,15 +48,17 @@ export const ActorPhoto = styled.img`
   };
 
   @media(max-width: ${({ theme }) => theme.breakPoint.mobileMax}px) {
-  width: 100%;
-  height: 50vw;
-  object-position: 50% 20% 
+    width: 100%;
+    height: 50vw;
+    object-position: 50% 20% ;
+    filter: grayscale(0%);
+    margin-bottom: 8px;
   };
 `;
 
 export const ActorRole = styled.div`
   text-align: center;
-  height: 42px;
+  margin-bottom: 8px;  
 `;
 
 export const ActorName = styled.div`
@@ -68,6 +66,7 @@ export const ActorName = styled.div`
 
   @media(max-width: ${({ theme }) => theme.breakPoint.mobileMax}px) {
     display: block;
+    margin-bottom: 4px;
   };
 `;
 
@@ -77,6 +76,7 @@ export const ActorFacts = styled.div`
   @media(max-width: ${({ theme }) => theme.breakPoint.mobileMax}px) {
     display: block;
     width: 95%;
+    text-align: center;
   };
 `;
 export const CarouselButton = styled.button`
@@ -92,7 +92,7 @@ export const CarouselButton = styled.button`
 
   &:hover{
     opacity: 1;    
-    transform: scale(1.1)
+    transform: scale(1.1);
   };
 
   &&{ 
@@ -110,7 +110,6 @@ export const CarouselButton = styled.button`
 
 export const Box = styled.div`
   margin-top: 25px;
-
   width: 150px; 
   
   @media(max-width: ${({ theme }) => theme.breakPoint.mobileMax}px) {

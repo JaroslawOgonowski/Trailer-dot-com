@@ -12,7 +12,7 @@ export const InfoMarker = styled.div`
 export const Avaible = styled.div`
   font-size: 22px;
   position: relative;
-  bottom: 10px;
+  bottom: -10px;
   left:0px;
   color: white;
   display: flex;
