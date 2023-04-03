@@ -60,17 +60,19 @@ export const Header = () => {
   const [filteredMovies, setFilteredMovies] = useState("");
 
   return (
-    <HeaderContainer>
-      <Logo width="300px" height="134.29px" src={TrailersLogo} alt="" onClick={() => dispatch(getInitialState())} />
-      <Menu>
-        <MenuFrame onMouseEnter={() => dispatch(toggleMenu())}>
-          <MenuElement>Get movie ⁞⁞</MenuElement>
-        </MenuFrame>
-        <Box hideMenu={hideMenu}>
-          <SearchMovieInput placeholder="Search 🎬" onInput={filterMovies} />
-          <MoviesList movies={filteredMovies || movies} />
-        </Box>
-      </Menu>
-    </HeaderContainer>
+    <>
+      <HeaderContainer>
+        <Menu>
+          <MenuFrame onClick={() => dispatch(toggleMenu())}>
+            <MenuElement>Get movie ⁞⁞</MenuElement>
+          </MenuFrame>
+          <Box hideMenu={hideMenu}>
+            <SearchMovieInput placeholder="Search 🎬" onInput={filterMovies} />
+            <MoviesList movies={filteredMovies || movies} />
+          </Box>
+        </Menu>
+      </HeaderContainer>
+      <Logo width="300px" src={TrailersLogo} alt="" onClick={() => dispatch(getInitialState())} />
+    </>
   );
 };

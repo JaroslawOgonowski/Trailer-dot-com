@@ -20,6 +20,7 @@ const movieSlice = createSlice({
       state.hideMenu = true;
       state.actor = [];
       state.title = null;
+      state.selectedMovie = null;
     },
     toggleHide: state => {
       state.hideTrailer = !state.hideTrailer;

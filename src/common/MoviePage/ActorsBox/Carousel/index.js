@@ -54,15 +54,17 @@ export const Carousel = () => {
       </Item>
     ));
   };
+
   const [activeIndex, setActiveIndex] = useState(0);
   const [items] = useState(createItems([setActiveIndex]));
   const slidePrev = () => setActiveIndex(activeIndex - 1);
   const slideNext = () => setActiveIndex(activeIndex + 1);
   const syncActiveIndex = ({ item }) => setActiveIndex(item);
-const autoWidthChanger= () => {
-  if (window.innerWidth < 767) return false
-  else return true
-}
+  const autoWidthChanger = () => {
+    if (window.innerWidth < 767) return false
+    else return true
+  };
+
   return (
     <Wrapper>
       <StyledCarousel>

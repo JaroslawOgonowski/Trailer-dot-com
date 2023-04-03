@@ -22,8 +22,7 @@ export const StyledBackground = styled.li`
     background-position-x: ${(props) => props.firstPositionX};}
     30%, 60%{background-image: url(${(props) => props.secondBackground});
     background-position-x: ${(props) => props.secondPositionX};}
-    65%, 90% {background-image: url(${(props) => props.thirdBackground});
-   }
+    65%, 90% {background-image: url(${(props) => props.thirdBackground});   }
     95%, 100%{background-image: url(${(props) => props.firstBackground});
     background-position-x:${(props) => props.firstPositionX};}   
   };

@@ -1,32 +1,22 @@
 import styled, { css } from "styled-components";
 
-export const HeaderContainer = styled.div`
-  text-decoration: none;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-top: 40px;
-  margin-right: 30px;
-
-  @media(max-width: ${({ theme }) => theme.breakPoint.mobileMax}px) {
-    flex-direction: column-reverse;
-    margin: 0;
-  };
+export const HeaderContainer = styled.header`
+  margin: 0;
+  position: sticky;
+  top:-1px;
+  z-index: 9;
 `;
 
 export const Logo = styled.img`
-  opacity: 0.6;
-  transition: 1s;
-  margin: 54px 100px 0 100px;
+  cursor: pointer;
   width: 300px;
   height: auto;
-
-  @media(max-width: ${({ theme }) => theme.breakPoint.notebook}px) {
-    margin: 48px 16px 0 16px;
-  };
+  opacity: 0.6;
+  transition: 1s;
+  margin: -20px 0 0 50px;
   
-  @media(max-width: ${({ theme }) => theme.breakPoint.minimalVersion}px) {
-    margin: 60px 16px 0 16px;
+  @media(max-width: ${({ theme }) => theme.breakPoint.mobileMax}px) {
+    margin: -20px 16px 0 16px;
     max-width: 250px;  
     height: auto;
   };  
@@ -43,6 +33,7 @@ export const Logo = styled.img`
 
 export const Menu = styled.div`
   margin: 0;
+  height: fit-content;;
   cursor: pointer;
   display: flex;
   flex-direction: column;
@@ -52,49 +43,37 @@ export const Menu = styled.div`
   font-family: 'Roboto', sans-serif;
   font-style: normal;
   font-weight: 500;
-  font-size: 20px;
+  font-size: 18px;
   transition: 0.5s;
-  
+  width: 100%;
+
   &:hover{
     color: ${({ theme }) => theme.color.mainText}; 
-    transform: scale(1.08)
   };
-  
-  @media(max-width: ${({ theme }) => theme.breakPoint.mobileMax}px) {
-    width: 100%;
-    &:hover{
-    
-    transform: scale(1)
-  };
-};
 `;
 
 export const MenuFrame = styled.div`
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
-  font-size: 22px;
+  font-size: 18px;
   margin: 0;
   width: 100%;
   height: 50px;
   border-radius: 5px;
-  
-  @media(max-width: ${({ theme }) => theme.breakPoint.mobileMax}px) {
-    background-color: ${({ theme }) => theme.color.menuBackground};  
-    padding: 20px 0;
-    justify-content: flex-end;
-  };
+  background-color: ${({ theme }) => theme.color.menuBackground};
+  padding: 10px 0;
 `;
 
 export const MenuElement = styled.div`
-  @media(max-width: ${({ theme }) => theme.breakPoint.mobileMax}px) {
-    margin-right: 50px;
-  };
+  margin-right: 50px;
 `;
 
 export const Box = styled.div`
+  position: absolute;
+  top:70px;
   align-self: flex-end;
-  margin: 0;
+  margin: 0 10px 0 0;
   &&{
     ${({ hideMenu }) => hideMenu && css`{
       visibility: hidden;
@@ -118,15 +97,15 @@ export const SearchMovieInput = styled.input`
   font-family: 'Roboto', sans-serif;
   font-style: normal;
   font-weight: 500;
-  font-size: 20px;
+  font-size: 18px;
   transition: 0.5s;
-  
+  background-color: ${({ theme }) => theme.color.menuBackground};
+
   &:hover{
     color: ${({ theme }) => theme.color.mainText};
     };
   
   @media(max-width: ${({ theme }) => theme.breakPoint.mobileMax}px) {
-    background-color: ${({ theme }) => theme.color.menuBackground};
     margin-right: 20px;
   };
 `;
@@ -140,6 +119,7 @@ export const ListOfMoviesComponent = styled.ul`
 
 export const Item = styled.li`
   text-decoration: none;
+  font-size: 16px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -147,7 +127,10 @@ export const Item = styled.li`
   border-radius: 5px;
   animation-name: rotateX;
   animation-duration: 0.5s;
-  animation-timing-function: linear; 
+  animation-timing-function: linear;     
+  background-color: ${({ theme }) => theme.color.menuBackground};
+  border: 1px solid gray;
+
   @keyframes rotateX {
     0% {
         opacity: 0;
@@ -167,8 +150,6 @@ export const Item = styled.li`
   };
 
   @media(max-width: ${({ theme }) => theme.breakPoint.mobileMax}px) {
-    background-color: ${({ theme }) => theme.color.menuBackground};
-    border: 1px solid gray;
     margin-right: 20px;
   };
 `;
@@ -178,8 +159,7 @@ export const NoSearchResultMsg = styled.div`
   justify-content: center;
   align-items: center;
   text-align: center;
-  
-  @media(max-width: ${({ theme }) => theme.breakPoint.mobileMax}px) {
-    background-color: ${({ theme }) => theme.color.menuBackground};
-  };
+  margin-top: 10px;
+  padding: 8px;
+  background-color: ${({ theme }) => theme.color.menuBackground};
 `;
