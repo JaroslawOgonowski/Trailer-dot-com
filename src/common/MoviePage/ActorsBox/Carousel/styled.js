@@ -28,9 +28,15 @@ export const Actor = styled.div`
   align-items: center;
   transition: 1s;
   cursor: pointer;
+  
   &:hover{
     transform: scale(1.05);
     color:${({ theme }) => theme.color.mainText}
+  };
+
+  @media(max-width: ${({ theme }) => theme.breakPoint.mobileMax}px) {
+  width: 100%;
+
   };
 `;
 
@@ -44,6 +50,12 @@ export const ActorPhoto = styled.img`
   &:hover{
     filter: grayscale(0%);
   };
+
+  @media(max-width: ${({ theme }) => theme.breakPoint.mobileMax}px) {
+  width: 100%;
+  height: 50vw;
+  object-position: 50% 20% 
+  };
 `;
 
 export const ActorRole = styled.div`
@@ -51,6 +63,22 @@ export const ActorRole = styled.div`
   height: 42px;
 `;
 
+export const ActorName = styled.div`
+  display: none;
+
+  @media(max-width: ${({ theme }) => theme.breakPoint.mobileMax}px) {
+    display: block;
+  };
+`;
+
+export const ActorFacts = styled.div`
+  display: none;
+
+  @media(max-width: ${({ theme }) => theme.breakPoint.mobileMax}px) {
+    display: block;
+    width: 95%;
+  };
+`;
 export const CarouselButton = styled.button`
   cursor: pointer;
   position: absolute;
@@ -82,7 +110,13 @@ export const CarouselButton = styled.button`
 
 export const Box = styled.div`
   margin-top: 25px;
+
   width: 150px; 
+  
+  @media(max-width: ${({ theme }) => theme.breakPoint.mobileMax}px) {
+    width: 90%;  
+    margin-left:30px;
+  };
 `;
 
 export const ActorDetail = styled.div`
@@ -103,10 +137,7 @@ export const ActorDetail = styled.div`
   transition: 0.8s;
   
   @media(max-width: ${({ theme }) => theme.breakPoint.mobileMax}px) {
-    bottom: 20px;
-    display:flex;
-    flex-direction: column;
-    height: auto;
+    display: none;
   };
 `;
 
@@ -152,10 +183,10 @@ export const DetailRole = styled.h3`
 `;
 
 export const DetailFacts = styled.div`
-  font-size: 26px;
+  font-size: 20px;
   
   @media(max-width: ${({ theme }) => theme.breakPoint.mobileMax}px) {
-    font-size: 20px;
+    font-size: 16px;
   };
 `;
 
@@ -163,9 +194,3 @@ export const Item = styled.div`
   width: fit-content;
 `;
 
-export const ActorName = styled.div`
-display: none;
-`;
-export const ActorFacts = styled.div`
-display: none;
-`;

@@ -11,7 +11,7 @@ const movieSlice = createSlice({
     hideMenu: true,
     actor: [],
     title: null,
-    selectedMovie: null
+    selectedMovie: null,
   },
 
   reducers: {
@@ -48,8 +48,8 @@ const movieSlice = createSlice({
     },
     toggleActor: (state, action) => {
       const index = state.moreInfo.findIndex(selectedActor => selectedActor.actor === action.payload);
-      state.actor = state.moreInfo[index]
-    }
+      state.actor = state.moreInfo[index];
+    },
   },
 });
 
@@ -67,8 +67,6 @@ export const {
 
 export const selectState = state => state.movie;
 export const selectHide = state => selectState(state).hideTrailer;
-export const selectLike = state => selectState(state).like;
-export const selectAdd = state => selectState(state).add;
 export const selectLoading = (state) => selectState(state).loading;
 export const selectMovies = (state) => selectState(state).movies;
 export const selectMenu = (state) => selectState(state).hideMenu;
@@ -76,5 +74,5 @@ export const selectTitle = (state) => selectState(state).title;
 export const selectInfo = (state) => selectState(state).moreInfo;
 export const selectActor = (state) => selectState(state).actor;
 export const selectedMovie = (state) => selectState(state).selectedMovie;
-
+export const selectWidth = (state) => selectState(state).width
 export default movieSlice.reducer;

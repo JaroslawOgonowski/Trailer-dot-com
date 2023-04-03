@@ -59,7 +59,10 @@ export const Carousel = () => {
   const slidePrev = () => setActiveIndex(activeIndex - 1);
   const slideNext = () => setActiveIndex(activeIndex + 1);
   const syncActiveIndex = ({ item }) => setActiveIndex(item);
-
+const autoWidthChanger= () => {
+  if (window.innerWidth < 767) return false
+  else return true
+}
   return (
     <Wrapper>
       <StyledCarousel>
@@ -67,11 +70,11 @@ export const Carousel = () => {
           items={items}
           activeIndex={activeIndex}
           onSlideChanged={syncActiveIndex}
-          autoWidth
+          autoWidth={autoWidthChanger()}
           animationType="fadeout"
           animationDuration={800}
-          paddingLeft={50}
-          paddingRight={50}
+          paddingLeft={10}
+          paddingRight={10}
           disableDotsControls
           renderPrevButton={() => {
             return <CarouselButton aria-label="Previous button" previous onClick={slidePrev}><Previous /></CarouselButton>

@@ -4,10 +4,12 @@ export const MovieInformationContainer = styled.div`
 font-family: 'Noto Sans Sinhala', sans-serif;
   font-style: normal;
   color: ${({ theme }) => theme.color.mainText};
+  background: ${({ theme }) => theme.color.buttonBackground};
   display: flex;
   gap: 45px;
   padding: 8px;
   margin-bottom: 60px;
+  border-radius: 5px;
   
   @media(max-width: ${({ theme }) => theme.breakPoint.mobileMax}px) {
     flex-direction: column;
