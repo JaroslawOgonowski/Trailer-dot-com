@@ -4,16 +4,19 @@ export const StyledButtons = styled.div`
   display: flex;  
   gap: 22px;
   font-family: 'Roboto', sans-serif;
-  margin-bottom: 26px;
-  margin-bottom: 100px;
+  margin-bottom: 30px;
+
+  @media(max-width: ${({ theme }) => theme.breakPoint.mobileMax}px) { 
+    align-items: center;
+    justify-content: center;
+  };
   
   @media(max-width: ${({ theme }) => theme.breakPoint.minimalVersion}px) { 
     gap:20px;
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    margin-bottom: 80px;
-  }
+  };
 `;
 export const Box = styled.a`
   background: none;

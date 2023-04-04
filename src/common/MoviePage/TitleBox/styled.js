@@ -2,7 +2,7 @@ import styled, { css } from "styled-components";
 
 export const Marker = styled.div`
   position: absolute;
-  top:200px;
+  top:0px;
   
   &&{
     ${({ hideTrailer }) => hideTrailer && css`{
@@ -14,8 +14,8 @@ export const Marker = styled.div`
 export const MovieBox = styled.div`
   display: flex;
   align-items: center;
-  gap: 40px;
-  margin-bottom: 100px;
+  gap: 10px;
+  margin-bottom: 30px;
   
   @media(max-width: ${({ theme }) => theme.breakPoint.fullPage}px) {
     flex-direction: column;
@@ -34,23 +34,21 @@ export const Title = styled.h1`
   font-style: normal;
   width: 100%;
   font-weight: 400;
-  font-size: 90px;
-  margin: 0;
-  padding-bottom: 130px;
+  font-size: 80px;
+  margin: 50px 0 0 0;
   
   @media(max-width: ${({ theme }) => theme.breakPoint.notebook}px) { 
     align-self: center;
     text-align: center;
     padding-bottom: 0;
     font-size: 12vw;
-    margin-bottom: 80px;
   };
 `;
 
 export const Trailer = styled.iframe`
   width: 100%;
-  height: 22vw;
-  
+  aspect-ratio: 16 / 9;    
+  margin: 50px 0;
   &&{
     ${({ hideTrailer }) => hideTrailer && css`{
       display: none;
@@ -59,7 +57,6 @@ export const Trailer = styled.iframe`
   
   @media(max-width: ${({ theme }) => theme.breakPoint.fullPage}px) {
     width: 600px;
-    height: 350px;
   };
   
   @media(max-width: ${({ theme }) => theme.breakPoint.notebook}px) { 
@@ -68,12 +65,11 @@ export const Trailer = styled.iframe`
 
   @media(max-width: ${({ theme }) => theme.breakPoint.mobileMax}px) { 
     width: 500px;
-    height: 300px;
+    margin 0;
   };
 
   @media(max-width: ${({ theme }) => theme.breakPoint.minimalVersion}px) { 
     width: 80vw;
-    height:30vh;
     align-self: center;
   };
   `;

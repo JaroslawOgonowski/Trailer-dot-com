@@ -1,23 +1,21 @@
 import styled from "styled-components";
 
 export const MovieInformationContainer = styled.div`
-font-family: 'Noto Sans Sinhala', sans-serif;
+  max-width: 700px;
+  font-family: 'Noto Sans Sinhala', sans-serif;
   font-style: normal;
   color: ${({ theme }) => theme.color.mainText};
   background: ${({ theme }) => theme.color.buttonBackground};
   display: flex;
-  gap: 45px;
+
+  gap: 20px;
   padding: 8px;
   margin-bottom: 60px;
   border-radius: 5px;
   
   @media(max-width: ${({ theme }) => theme.breakPoint.mobileMax}px) {
     flex-direction: column;
-  };
-  
-  @media(max-width: ${({ theme }) => theme.breakPoint.minimalVersion}px) {
     background: linear-gradient(${({ theme }) => theme.color.buttonBackground}, ${({ theme }) => theme.color.black});
-    padding: 8px;
   };
 `;
 
@@ -43,7 +41,7 @@ export const Subtitle = styled.div`
 export const Description = styled.div`
   margin-top: 16px;
   font-size: 16px;
-  max-width: 470px;
+  max-width: 460px;
 `;
 
 export const MovieData = styled.div`

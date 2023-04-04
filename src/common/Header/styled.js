@@ -61,8 +61,10 @@ export const MenuFrame = styled.div`
   width: 100%;
   height: 50px;
   border-radius: 5px;
-  background-color: ${({ theme }) => theme.color.menuBackground};
   padding: 10px 0;
+  @media(max-width: ${({ theme }) => theme.breakPoint.mobileMax}px) {
+    background-color: ${({ theme }) => theme.color.menuBackground};
+  };
 `;
 
 export const MenuElement = styled.div`
