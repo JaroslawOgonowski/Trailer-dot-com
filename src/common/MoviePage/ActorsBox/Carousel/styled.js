@@ -31,8 +31,11 @@ export const Actor = styled.div`
   };
 
   @media(max-width: ${({ theme }) => theme.breakPoint.mobileMax}px) {
-  width: 100%;
+    width: 100%;
+  };
 
+  @media(min-width: ${({ theme }) => theme.breakPoint.tv}px) {
+    width: 100%;
   };
 `;
 
@@ -49,10 +52,16 @@ export const ActorPhoto = styled.img`
 
   @media(max-width: ${({ theme }) => theme.breakPoint.mobileMax}px) {
     width: 100%;
-    height: 50vw;
+    height: 40vw;
     object-position: 50% 20% ;
     filter: grayscale(0%);
     margin-bottom: 8px;
+  };
+  
+  @media(min-width: ${({ theme }) => theme.breakPoint.tv}px) {
+    width: 8vw;
+    height: 10vw;
+    padding: 0.2vw;
   };
 `;
 
@@ -68,6 +77,10 @@ export const ActorName = styled.div`
     display: block;
     margin-bottom: 4px;
   };
+  
+  @media(min-width: ${({ theme }) => theme.breakPoint.tv}px) {
+    font-size: 20vw;
+  };
 `;
 
 export const ActorFacts = styled.div`
@@ -79,6 +92,7 @@ export const ActorFacts = styled.div`
     text-align: center;
   };
 `;
+
 export const CarouselButton = styled.button`
   cursor: pointer;
   position: absolute;
@@ -89,6 +103,11 @@ export const CarouselButton = styled.button`
   height: 236px;
   opacity:0.5;
   transition: 0.5s;
+
+  @media(min-width: ${({ theme }) => theme.breakPoint.tv}px) {
+    height: 12vw;
+    width: 2vw;
+  };
 
   &:hover{
     opacity: 1;    
@@ -115,6 +134,11 @@ export const Box = styled.div`
   @media(max-width: ${({ theme }) => theme.breakPoint.mobileMax}px) {
     width: 90%;  
     margin-left:30px;
+  };
+
+  @media(min-width: ${({ theme }) => theme.breakPoint.tv}px) {
+    width: 90%;  
+    margin-left:0.6vw;
   };
 `;
 
@@ -168,6 +192,10 @@ export const DetailName = styled.h2`
     margin: 0;
     font-size: 30px;
   };
+  
+  @media(min-width: ${({ theme }) => theme.breakPoint.tv}px) {
+    font-size: 1.4vw;
+  };
 `;
 
 export const DetailRole = styled.h3`
@@ -179,6 +207,10 @@ export const DetailRole = styled.h3`
   @media(max-width: ${({ theme }) => theme.breakPoint.mobileMax}px) {
     font-size: 22px;
   };
+  
+  @media(min-width: ${({ theme }) => theme.breakPoint.tv}px) {
+    font-size: 1.3vw;
+  };
 `;
 
 export const DetailFacts = styled.div`
@@ -187,9 +219,18 @@ export const DetailFacts = styled.div`
   @media(max-width: ${({ theme }) => theme.breakPoint.mobileMax}px) {
     font-size: 16px;
   };
+  
+  @media(min-width: ${({ theme }) => theme.breakPoint.tv}px) {
+    font-size: 1.1vw;
+  };
 `;
 
 export const Item = styled.div` 
   width: fit-content;
+  
+  @media(min-width: ${({ theme }) => theme.breakPoint.tv}px) {
+    margin-right: 3.25vw;
+    font-size: 0.9vw;
+  };
 `;
 

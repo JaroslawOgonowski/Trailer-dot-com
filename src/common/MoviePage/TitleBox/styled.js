@@ -43,12 +43,17 @@ export const Title = styled.h1`
     padding-bottom: 0;
     font-size: 12vw;
   };
+
+  @media(min-width: ${({ theme }) => theme.breakPoint.tv}px) {
+    font-size: 8vw;
+  };
 `;
 
 export const Trailer = styled.iframe`
   width: 100%;
   aspect-ratio: 16 / 9;    
   margin: 50px 0;
+  
   &&{
     ${({ hideTrailer }) => hideTrailer && css`{
       display: none;

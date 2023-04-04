@@ -9,6 +9,10 @@ export const FooterContent = styled.div`
   bottom: 0;
   right: 0;
   left: 0;
+
+  @media(min-width: ${({ theme }) => theme.breakPoint.tv}px) {
+    font-size: 1.1vw;
+  };
 `;
 
 export const StyledLink = styled.a`

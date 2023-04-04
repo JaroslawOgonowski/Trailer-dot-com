@@ -23,6 +23,10 @@ export const Avaible = styled.div`
   @media(max-width: ${({ theme }) => theme.breakPoint.mobileMax}px) {
     flex-wrap : wrap;
   };
+
+  @media(min-width: ${({ theme }) => theme.breakPoint.tv}px) {
+    font-size: 1.1vw;
+  };
 `;
 
 export const StreamingLogo = styled.img`
@@ -32,5 +36,9 @@ export const StreamingLogo = styled.img`
   
   @media(max-width: ${({ theme }) => theme.breakPoint.mobileMax}px) {
     width: 100px;
+  };
+
+  @media(min-width: ${({ theme }) => theme.breakPoint.tv}px) {
+    width: 10vw;
   };
 `;

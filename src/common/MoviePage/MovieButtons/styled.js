@@ -17,7 +17,12 @@ export const StyledButtons = styled.div`
     align-items: center;
     justify-content: center;
   };
+  
+  @media(min-width: ${({ theme }) => theme.breakPoint.tv}px) {
+    gap: 1vw;
+  };
 `;
+
 export const Box = styled.a`
   background: none;
   border: none;
@@ -45,6 +50,13 @@ export const Button = styled.button`
     border: 3px solid ${({ theme }) => theme.color.buttonBorderHover};
     color: ${({ theme }) => theme.color.mainText};
   };
+  
+  @media(min-width: ${({ theme }) => theme.breakPoint.tv}px) {
+    width: 10vw;
+    height: 2.5vw;
+    border-radius: 2vw;
+    font-size: 1vw;
+  };
 `;
 
 export const Icon = styled.span`
@@ -57,4 +69,9 @@ export const Icon = styled.span`
   border: 3px solid currentColor;
   width: 30px;
   height: 30px;
+  
+  @media(min-width: ${({ theme }) => theme.breakPoint.tv}px) {
+    width: 1.4vw;
+    height: 1.4vw;
+  };
 `;

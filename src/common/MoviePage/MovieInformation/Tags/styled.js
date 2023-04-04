@@ -6,13 +6,17 @@ export const TagsContainer = styled.div`
   font-family: 'Noto Sans Sinhala', sans-serif;
   font-style: normal;
   font-weight: 400;
-  font-size: 16px;
   display: flex;
   gap: 8px;
 `;
 
 export const Year = styled.div`
   width: max-content;
+    
+  @media(min-width: ${({ theme }) => theme.breakPoint.tv}px) {
+    font-size: 0.9vw;
+    margin-right: 0.3vw;
+  };
 `;
 
 export const AgeGroup = styled.div`
@@ -24,6 +28,10 @@ export const AgeGroup = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  
+  @media(min-width: ${({ theme }) => theme.breakPoint.tv}px) {
+    font-size: 0.9vw;
+  };
 `;
 
 export const Episodes = styled.div`
@@ -34,7 +42,13 @@ export const Episodes = styled.div`
   @media(max-width: ${({ theme }) => theme.breakPoint.minimalVersion}px) { 
     font-size: 8px;
     text-align: center;
-};
+  };
+
+  @media(min-width: ${({ theme }) => theme.breakPoint.tv}px) {
+    font-size: 0.9vw;
+    margin: 0 0.3vw;
+    wrap: none;
+  };
 `;
 
 export const HighestStandard = styled.div`
@@ -46,6 +60,10 @@ export const HighestStandard = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+    
+  @media(min-width: ${({ theme }) => theme.breakPoint.tv}px) {
+    font-size: 0.9vw;
+  };
 `;
 
 export const AudioStream = styled.div`
@@ -60,6 +78,11 @@ export const Subtitles = styled.div`
   align-items: center;
   width: 16px;
   padding-top: 2px;
+    
+  @media(min-width: ${({ theme }) => theme.breakPoint.tv}px) {
+    width: 2vw;
+    height: 2vw;
+  };
 `;
 
 export const Top = styled.div`

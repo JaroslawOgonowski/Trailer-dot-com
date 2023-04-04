@@ -20,8 +20,8 @@ return (
     <AgeGroup>{tagGroup}</AgeGroup>
     <Episodes>{tagEpisodes}</Episodes>
     <HighestStandard>{tagStandard}</HighestStandard>
-    <AudioStream>{tagAudio ? <Audio /> : null}</AudioStream>
-    <Subtitles>{tagSubtitles ? <SubtitlesIcon /> : null}</Subtitles>
+    <AudioStream>{tagAudio ? <Audio width="2.8vmax" height="2.8vmax"/> : null}</AudioStream>
+    <Subtitles>{tagSubtitles ? <SubtitlesIcon width="1.6vmax" height="1.6vmax"/> : null}</Subtitles>
   </TagsContainer>
   );
 };
