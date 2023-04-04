@@ -9,14 +9,14 @@ export const HeaderContainer = styled.header`
 
 export const Logo = styled.img`
   cursor: pointer;
-  width: 300px;
+  width: 20vw;
   height: auto;
   opacity: 0.6;
   transition: 1s;
   margin: -20px 0 0 50px;
   
   @media(max-width: ${({ theme }) => theme.breakPoint.mobileMax}px) {
-    margin: -20px 16px 0 16px;
+    margin: 0 16px;
     max-width: 250px;  
     height: auto;
   };  
@@ -43,13 +43,12 @@ export const Menu = styled.div`
   font-family: 'Roboto', sans-serif;
   font-style: normal;
   font-weight: 500;
-  font-size: 18px;
   transition: 0.5s;
   width: 100%;
 
   &:hover{
     color: ${({ theme }) => theme.color.mainText}; 
-  };
+  }; 
 `;
 
 export const MenuFrame = styled.div`
@@ -62,8 +61,15 @@ export const MenuFrame = styled.div`
   height: 50px;
   border-radius: 5px;
   padding: 10px 0;
+  
   @media(max-width: ${({ theme }) => theme.breakPoint.mobileMax}px) {
     background-color: ${({ theme }) => theme.color.menuBackground};
+  }; 
+  
+  @media(min-width: ${({ theme }) => theme.breakPoint.tv}px) {
+    font-size: 1.4vw; 
+    margin-right: 5vw;
+    margin-top: 2vw;  
   };
 `;
 
@@ -76,10 +82,15 @@ export const Box = styled.div`
   top:70px;
   align-self: flex-end;
   margin: 0 10px 0 0;
+  
   &&{
     ${({ hideMenu }) => hideMenu && css`{
       visibility: hidden;
     }`};
+  };
+  
+  @media(min-width: ${({ theme }) => theme.breakPoint.tv}px) {
+    top: 5vw;
   };
 `;
 
@@ -105,10 +116,18 @@ export const SearchMovieInput = styled.input`
 
   &:hover{
     color: ${({ theme }) => theme.color.mainText};
-    };
+  };
   
   @media(max-width: ${({ theme }) => theme.breakPoint.mobileMax}px) {
     margin-right: 20px;
+  };
+  
+  @media(min-width: ${({ theme }) => theme.breakPoint.tv}px) {
+    font-size: 1.2vw; 
+    padding: 0.4vw 3vw;
+    margin-right: 0.4vw;
+    margin-top: 0.2vw;
+    width: 8vw;
   };
 `;
 
@@ -154,6 +173,14 @@ export const Item = styled.li`
   @media(max-width: ${({ theme }) => theme.breakPoint.mobileMax}px) {
     margin-right: 20px;
   };
+  
+  @media(min-width: ${({ theme }) => theme.breakPoint.tv}px) {
+    font-size: 1.2vw; 
+    padding: 0.4vw 3vw;
+    margin-right: 0.4vw;
+    margin-top: 0.2vw;
+    width: 8vw;
+  };
 `;
 
 export const NoSearchResultMsg = styled.div`
@@ -164,4 +191,12 @@ export const NoSearchResultMsg = styled.div`
   margin-top: 10px;
   padding: 8px;
   background-color: ${({ theme }) => theme.color.menuBackground};
+  
+  @media(min-width: ${({ theme }) => theme.breakPoint.tv}px) {
+    font-size: 1.2vw; 
+    padding: 0.4vw 3vw;
+    margin-right: 0.4vw;
+    margin-top: 0.2vw;
+    width: 8vw;
+  };
 `;

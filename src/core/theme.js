@@ -1,5 +1,6 @@
 export const theme = {
   breakPoint: {
+    tv: 1707,
     fullPage: 1330,
     notebook: 950,
     mobileMax: 767,
