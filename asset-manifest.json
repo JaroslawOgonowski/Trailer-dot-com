@@ -1,20 +1,20 @@
 {
   "files": {
     "main.css": "/Trailer-dot-com/static/css/main.f32e9301.css",
-    "main.js": "/Trailer-dot-com/static/js/main.69f04414.js",
+    "main.js": "/Trailer-dot-com/static/js/main.e1da5850.js",
     "static/js/787.852a58e9.chunk.js": "/Trailer-dot-com/static/js/787.852a58e9.chunk.js",
     "static/media/Top10.svg": "/Trailer-dot-com/static/media/Top10.02d506a1488053d6f0c3bcbe394b619f.svg",
     "static/media/Audio.svg": "/Trailer-dot-com/static/media/Audio.e87f2854d759a8654b9689cf904ebbaa.svg",
     "index.html": "/Trailer-dot-com/index.html",
-    "static/media/Next.svg": "/Trailer-dot-com/static/media/Next.a0f6991f8f9d7cea4b6659322d7b27b6.svg",
-    "static/media/Previous.svg": "/Trailer-dot-com/static/media/Previous.21991b2bccdd5216f27912e97551421c.svg",
+    "static/media/Next.svg": "/Trailer-dot-com/static/media/Next.efa51c81f6dbddd70158e5a988908ace.svg",
+    "static/media/Previous.svg": "/Trailer-dot-com/static/media/Previous.cb24d96490abeda94338b661bdf192fe.svg",
     "static/media/SubtitlesIcon.svg": "/Trailer-dot-com/static/media/SubtitlesIcon.7ca023ef2f558604c328fc54e32a2caa.svg",
     "main.f32e9301.css.map": "/Trailer-dot-com/static/css/main.f32e9301.css.map",
-    "main.69f04414.js.map": "/Trailer-dot-com/static/js/main.69f04414.js.map",
+    "main.e1da5850.js.map": "/Trailer-dot-com/static/js/main.e1da5850.js.map",
     "787.852a58e9.chunk.js.map": "/Trailer-dot-com/static/js/787.852a58e9.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.f32e9301.css",
-    "static/js/main.69f04414.js"
+    "static/js/main.e1da5850.js"
   ]
 }
