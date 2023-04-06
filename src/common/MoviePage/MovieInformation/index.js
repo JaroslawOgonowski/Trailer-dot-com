@@ -28,11 +28,12 @@ export const MovieInformation = () => {
     <MovieInformationContainer>
       <Specification>
         <Tags />
-        <Top>{top10 ? <Top10 width="3vw" height="3vw"/> : null}{topContent}</Top>
+        <Top>
+          {top10 ? <Top10 width="3vw" height="3vw" /> : null}
+          {topContent}
+        </Top>
         <Subtitle>{subtitle}</Subtitle>
-        <Description>
-          {description}
-        </Description>
+        <Description>{description}</Description>
       </Specification>
       <MovieData>
         <Label>Cast:<OtherInfo>{" "}{cast}</OtherInfo></Label>
